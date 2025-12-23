@@ -1,11 +1,24 @@
 @reference "tailwindcss";
 
+@layer base {
+    /* h1 {
+        @apply text-center text-2xl font-bold text-black;
+    } */
 
-@layer base{
-    h1{
-        @apply text-center text-2xl font-bold text-black; 
-    }
     .main {
-        @apply px-5 sm:px-10 md:px-15 lg:px-20  flex flex-col justify-center items-center w-full gap-8 sm:gap-10 md:gap-12 lg:gap-14;
+        @apply px-5 sm:px-10 md:px-14 lg:px-20
+               flex flex-col justify-center items-center
+               w-full
+               gap-8 sm:gap-10 md:gap-12 lg:gap-14;
+    }
+}
+
+@layer components {
+    .footerHeading {
+        @apply text-[16px] lg:text-[20px] text-white tracking-wide font-semibold text-start ;
+    }
+
+    .footertext {
+        @apply text-[14px] lg:text-[16px] text-white tracking-wide;
     }
 }
