@@ -11,12 +11,12 @@ const GlobalHero = ({ item }) => {
     >
       <div className="absolute inset-0 bg-black/60"></div>
 
-      <div className="relative z-10 text-center px-4 animate-slideUp">
+      <div className="relative z-10 text-center px-4 animate-slide-up-delay">
         <h1 className="text-white text-3xl lg:text-5xl font-bold">
           {item.title}
         </h1>
 
-        <p className="text-gray-200 max-w-3xl mt-3">
+        <p className="text-gray-200 max-w-3xl mt-3 animate-slide-up-delay">
           {item.Description}
         </p>
       </div>
