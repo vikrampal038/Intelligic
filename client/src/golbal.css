@@ -19,12 +19,21 @@
   }
 
   .footertext {
-    @apply text-[14px] lg:text-[16px] text-white tracking-wide;
+    @apply text-[14px] lg:text-[16px] text-white tracking-wide text-start;
   }
 
   .footerIcon {
-    @apply text-[#23baf1] text-[16px] lg:text-[18px];
+    @apply text-[#00AEEF] text-[16px] lg:text-[20px] shrink-0 transition-all duration-300 hover:scale-110 hover:text-blue-500;
   }
+
+  /* For Text Animation start  */
+  .animationtext{
+    @apply absolute left-0 top-0 w-full h-full transition-transform duration-1000 ease-in-out group-hover:-translate-y-full;
+  }
+  .animationtexthover{
+    @apply absolute left-0 top-full w-full h-full transition-transform duration-1000 ease-in-out group-hover:-translate-y-full;
+  }
+  /* For Text Animation end  */
 }
 
 @keyframes slideUp {
