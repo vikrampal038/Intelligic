@@ -1,21 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { SeoData } from "../Data/FooterData";
-import { Service } from "../Data/FooterData";  
+import { Service } from "../Data/FooterData";
 import { Social } from "../Data/FooterData";
 import { Contact } from "../Data/FooterData";
 import { Legal } from "../Data/FooterData";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
-// import { FiPhone, FiMail, FiMapPin, FiGlobe } from "react-icons/fi";
-
-// import {
-//   FaLinkedinIn,
-//   FaGithub,
-//   FaFacebookF,
-//   FaInstagram,
-//   FaTwitter,
-//   FaTelegramPlane,
-// } from "react-icons/fa";
 
 const Footer = () => {
   const columns = 4;
@@ -25,76 +15,42 @@ const Footer = () => {
     SeoData.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn)
   );
 
-  // for Services Data
-  // const Service = [
-  //   { label: "Web Development", path: "/services/web-development" },
-  //   { label: "E-Commerces Websites", path: "/services/web-development" },
-  //   { label: "Domain & Hosting", path: "/services/web-development" },
-  //   { label: "CRM & ERP", path: "/services/web-development" },
-  //   { label: "Business Collaterals", path: "/services/web-development" },
-  //   { label: "Social Meida Design", path: "/services/web-development" },
-  // ];
-
-  // for Legal Data
-  // const Legal = [
-  //   { label: "Privacy Policy", path: "/public/LegalsFiles/Privacy-Policy.pdf" },
-  //   {
-  //     label: "Terms And Conditions",
-  //     path: "/public/LegalsFiles/Terms-and-Conditions.pdf",
-  //   },
-  //   { label: "Refund Policy", path: "/public/LegalsFiles/Refund-Policy.pdf" },
-  // ];
-
-  // for Contact Data
-  // const Contact = [
-  //   { label: "+91 9029965109", icons: FiPhone },
-  //   { label: "intelligicssolutions@gmail.com", icons: FiMail },
-  //   { label: "https://intelligic.org", icons: FiGlobe },
-  //   {
-  //     label:
-  //       "B Wing, EXPRESS ZONE, F-164, Western Express Hwy, Malad, Panch Bawadi, Malad East, Mumbai, Maharashtra 400063",
-  //     icons: FiMapPin,
-  //   },
-  // ];
-
-  // for Social  Data
-  // const Social = [
-  //   {
-  //     label: "Lindedin",
-  //     path: "/services/web-development",
-  //     icons: FaLinkedinIn,
-  //   },
-  //   { label: "Github", path: "/services/web-development", icons: FaGithub },
-  //   {
-  //     label: "FaceBook",
-  //     path: "/services/web-development",
-  //     icons: FaFacebookF,
-  //   },
-  //   {
-  //     label: "Instagram",
-  //     path: "/services/web-development",
-  //     icons: FaInstagram,
-  //   },
-  //   { label: "Twitter", path: "/services/web-development", icons: FaTwitter },
-  //   {
-  //     label: "Telegram",
-  //     path: "/services/web-development",
-  //     icons: FaTelegramPlane,
-  //   },
-  // ];
-
   return (
     <div className="w-full ">
       <div className="flex flex-col justify-center items-center w-full bg-black">
         {/* For First Section */}
-        <div className=" px-5 sm:px-10 md:px-15 lg:px-20 w-full py-8 flex justify-center flex-col items-center gap-6 bg-black">
+        <div className=" px-5 sm:px-10 md:px-15 lg:px-20 w-full py-8 flex justify-center flex-col items-center gap-10 bg-black">
           {/* For Logo And Email Section */}
-          <div className="border w-full border-amber-50  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-start gap-6">
-            <div className="border text-white">Logo</div>
-            <div className="border text-white">Email</div>
+          <div className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-start gap-6">
+            <div className="flex justify-start items-start">
+              <img
+                src="Assets/Logo/intelligic.png"
+                alt="Footer logo"
+                className="w-32 sm:w-40 md:w-48 h-auto object-contain"
+              />
+            </div>
+
+            {/* Email Subscription */}
+            <div className="flex flex-col gap-3 w-full max-w-md">
+              <span className="footertext font-semibold">
+                Subscribe to our newsletter for latest updates
+              </span>
+
+              <div className="flex flex-col sm:flex-row items-stretch gap-2 sm:gap-3 border border-amber-50 rounded-lg p-2">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  className="w-full px-3 py-2 rounded-md outline-none bg-transparent footertext"
+                />
+
+                <button type="submit" className="footerbutton w-full sm:w-auto">
+                  Subscribe
+                </button>
+              </div>
+            </div>
           </div>
 
-          {/* For Links And Cnntacts */}
+          {/* For Links And Contacts */}
           <div className="border  w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
             {/* For Services Link */}
             <div className=" flex flex-col gap-6">
