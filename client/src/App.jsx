@@ -7,7 +7,7 @@ const App = () => {
   return (
     <div className='flex flex-col w-full justify-center items-center'>
       <Navbar />
-      <div className='flex flex-col w-full pb-14'>
+      <div className='flex flex-col w-full'>
       <MainRouter />
       </div>
       <Footer />

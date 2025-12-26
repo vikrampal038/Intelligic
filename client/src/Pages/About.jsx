@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalHero from "../common/GlobalHero";
 import { HeroData } from "../Data/HeroData";
-import AbourSec from "../components/AboutUs/AbourSec";
+import AboutSec from "../components/AboutUs/AboutSec";
 import AboutChoose from "../components/AboutUs/AboutChoose";
 import AboutSkill from "../components/AboutUs/AboutSkill";
 import AboutValues from "../components/AboutUs/AboutValues";
@@ -17,8 +17,8 @@ const About = () => {
       <GlobalHero item={heroItem} />
 
       {/* Page Content */}
-      <div className="main">
-        <AbourSec />
+      <div>
+        <AboutSec />
         <AboutCounter />
         <AboutValues />
         <AboutSkill />
