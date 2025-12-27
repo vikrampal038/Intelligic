@@ -5,10 +5,6 @@ import { RiTimerFlashFill, RiLineChartFill } from "react-icons/ri";
 import { GiStarMedal, GiShakingHands, GiLaptop, GiLindenLeaf  } from "react-icons/gi";
 import { FaRegLightbulb } from "react-icons/fa";
 import { IoCheckbox, IoShieldHalfSharp, IoCheckmarkDoneCircleSharp } from "react-icons/io5";
-// import {  } from "react-icons/ri";
-// import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
-
-
 
 
 export const ChooseUs = [
@@ -131,4 +127,11 @@ export const countersData = [
   { id: 2, value: 1000, label: "Professional Creative Works Done" },
   { id: 3, value: 300, label: "Website Under AMC" },
   { id: 4, value: 15, label: "Team Members" },
+];
+
+export const Skills = [
+  { title: "Ideas", value: 95 },
+  { title: "Development", value: 90 },
+  { title: "Progress", value: 85 },
+  { title: "Efficiency", value: 92 },
 ];

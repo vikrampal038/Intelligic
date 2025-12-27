@@ -13,11 +13,11 @@ const Services = () => {
       {/* Hero Section */}
       <GlobalHero item={heroItem} />
       {/* Page Contain */}
-      <div className="main">
+      <div>
         <ServiceSec />
+        <ServiceValue />
         <ServicesAnalyzer />
         <ServicesConnect />
-        <ServiceValue />
       </div>
     </div>
   );

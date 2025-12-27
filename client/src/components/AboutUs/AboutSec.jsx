@@ -4,12 +4,12 @@ import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 const AboutSec = () => {
   return (
-    <div className="w-full flex flex-col justify-between items-center bg-[#F6EEE3] pb-14 pt-18">
+    <section className="w-fulsection bg-[#F6EEE3] pb-14 pt-20">
       <div className="main flex flex-row justify-between items-center  w-full">
         {/* Left Side Sction */}
         <div className="w-1/2 flex justify-center items-center">
           <img
-            className="w-140 h-auto rounded-2xl box2-shadow transition-all duration-2000 hover:scale-110"
+            className="cart w-140 h-auto rounded-2xl"
             src="Assets/All Images/AboutSec2.png"
             alt="OurSkill Section Image"
           />
@@ -49,7 +49,7 @@ const AboutSec = () => {
                   className="flex items-center gap-4 transition w-full"
                 >
                   <IoCheckmarkDoneCircleSharp className="footerIcon" />
-                  <div className="flex flex-col group relative h-[22px] w-[230px] overflow-hidden">
+                  <div className="flex flex-col group relative h-[22px] w-[250px] overflow-hidden">
                     <span className="listText animationtext">{item.title}</span>
                     <span className="listText animationtexthover">
                       {item.title}
@@ -61,7 +61,7 @@ const AboutSec = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

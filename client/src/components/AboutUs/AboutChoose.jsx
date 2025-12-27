@@ -4,7 +4,7 @@ import { ChooseUs } from "../../Data/AboutData";
 
 const AboutChoose = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center bg-[#EBE8E2] py-14">
+    <section className="w-full flex flex-col justify-center items-center bg-[#EBE8E2] py-20">
       <div className="main w-full">
         <div className="  w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
@@ -31,7 +31,7 @@ const AboutChoose = () => {
               return (
                 <div
                   key={index}
-                  className="valBox-Shadow flex bg-white flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px] "
+                  className="card flex bg-white flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px]"
                 >
                   <Icon className="icon" />
                   <div className="flex flex-col gap-4 justify-center items-start">
@@ -46,7 +46,7 @@ const AboutChoose = () => {
 
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

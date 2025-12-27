@@ -1,11 +1,12 @@
 import React from "react";
+import SkillsSection from "../../common/SkillsSection";
 
 const AboutSkill = () => {
   return (
-    <div className="w-full flex flex-col justify-between items-center bg-[#F6EEE3] py-14">
+    <section className="w-full flex flex-col justify-between items-center bg-[#F6EEE3] py-20">
       <div className="main flex flex-row justify-between items-center  w-full">
         {/* left Side Bar */}
-        <div className="  w-1/2 flex flex-col justify-center items-start gap-14">
+        <div className="w-1/2 flex flex-col justify-center items-start gap-8">
         {/* Heading */}
           <div className="w-full flex flex-col justify-center items-start gap-6 ">
             <h1 className="subHeading text-black">Our Skills</h1>
@@ -19,21 +20,21 @@ const AboutSkill = () => {
             </p>
           </div>
           {/* Progress Bar  */}
-          <div className="w-full flex flex-col justify-center items-start gap-8">
-            <h1 className="mainHeading">ProgresBar Pending</h1>
+          <div className="w-full flex flex-col justify-center items-center">
+            <SkillsSection />
           </div>
         </div>
 
         {/* Right Side sECTION */}
         <div className="w-1/2 flex justify-center items-center">
           <img
-            className="w-140 h-auto rounded-2xl box-shadow transition-all duration-2000 hover:scale-110"
+            className="cart w-140 h-auto rounded-2xl"
             src="Assets/All Images/AboutSkill.png"
             alt="OurSkill Section Image"
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

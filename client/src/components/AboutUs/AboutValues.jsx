@@ -3,7 +3,7 @@ import { Values } from "../../Data/AboutData";
 
 const AboutValues = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center bg-[#0A1A2F] py-14">
+    <section className="w-full flex flex-col justify-center items-center bg-[#0A1A2F] py-20">
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
@@ -25,12 +25,15 @@ const AboutValues = () => {
               return (
                 <div
                   key={index}
-                  className="box-shadow flex bg-[#FAF7EF] flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px] "
+                  className="relative overflow-hidden group cart-shadow flex bg-[#FAF7EF] flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px] transition-transform duration-700 ease-in-out"
                 >
-                  <Icon className="icon" />
-                  <div className="flex flex-col gap-4 justify-center items-start">
+                  {/* Square overlay */}
+                  <span className="absolute inset-0 bg-[#dad7d2] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
+
+                  <Icon className="icon z-10" />
+                  <div className="flex flex-col gap-4 justify-center items-start relative z-10">
                     <h3 className="subHeading">{item.title}</h3>
-                    <p className="mainParagraph ">{item.description}</p>
+                    <p className="mainParagraph">{item.description}</p>
                   </div>
                 </div>
               );
@@ -43,3 +46,13 @@ const AboutValues = () => {
 };
 
 export default AboutValues;
+// <div
+//   key={index}
+//   className="cart-shadow flex bg-[#FAF7EF] hover:bg-[#dad7d2] transition-transform duration-700 ease-in-out flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px] "
+// >
+//   <Icon className="icon" />
+//   <div className="flex flex-col gap-4 justify-center items-start">
+//     <h3 className="subHeading">{item.title}</h3>
+//     <p className="mainParagraph ">{item.description}</p>
+//   </div>
+// </div>

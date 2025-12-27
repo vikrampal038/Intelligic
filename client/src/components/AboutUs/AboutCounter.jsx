@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { countersData } from "../../Data/AboutData";
-import { TiPlus } from "react-icons/ti";
+import { TbPlus } from "react-icons/tb";
+
 
 function Counter() {
   const sectionRef = useRef(null);
@@ -50,22 +51,7 @@ function Counter() {
   };
 
   return (
-    // <section className="border w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center bg-[#F6EEE3] py-14">
-    //   <div className="main flex flex-row w-full border"
-    //    ref={sectionRef}>
-    //     {countersData.map((item, index) => (
-    //       <div key={item.id} className="border p-5">
-    //         <h2 style={{ fontSize: "80px", fontWeight: "bold" }}>
-    //           {counts[index]}
-    //           <span style={{ marginLeft: "4px" }}>+</span>
-    //         </h2>
-    //         <p>{item.label}</p>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </section>
-
-    <section className=" w-full flex flex-col justify-between items-center bg-[#F6EEE3] py-14">
+    <section className=" w-full flex flex-col justify-between items-center bg-[#F6EEE3] pt-14 pb-20">
       <div className="main  border-blue-900">
         <div
           ref={sectionRef}
@@ -74,11 +60,11 @@ function Counter() {
           {countersData.map((item, index) => (
             <div
               key={item.id}
-              className="soft-shadow border-2 rounded-lg w-full h-35 border-black flex flex-col justify-center items-center gap-2  p-[30px]  transition-all duration-1500 hover:scale-110 hover:bg-[#f0eeeb]"
+              className="cart-shadow  rounded-lg w-full h-35 flex flex-col justify-center items-center gap-2  p-[30px]  transition-all duration-1500 hover:scale-110 hover:bg-[#f0eeeb]"
             >
               <div className="flex justify-center items-center gap-1">
                 <h2 className="mainHeading text-black">{counts[index]}</h2>
-                <TiPlus className="icon text-black" />
+                <TbPlus className="icon text-black text-[25px]" />
               </div>
               <p className="mainParagraph">{item.label}</p>
             </div>

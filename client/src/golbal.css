@@ -43,7 +43,7 @@
     @apply text-[#00AEEF] text-[16px] lg:text-[22px] shrink-0 transition-all duration-300 hover:scale-110 hover:text-blue-500;
   }
   .footerbutton {
-    @apply bg-[#00AEEF] text-white px-6 py-2.5 rounded-lg whitespace-nowrap hover:scale-110   hover:bg-blue-800 transition-all duration-700;
+    @apply bg-[#00AEEF] text-white font-bold px-6 py-2.5 rounded-lg tracking-widest whitespace-nowrap hover:scale-110 hover:bg-blue-800 transition-all duration-1200;
   }
 
   /* For Text Animation start  */
@@ -57,25 +57,28 @@
 }
 
 @layer utilities {
-  .box-shadow {
+  .cart-shadow {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
       rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
       rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
-
-  .valBox-Shadow {
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  .card {
+    transition: box-shadow 0.3s ease-in-out;
   }
 
-  .box2-shadow {
-    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  .card:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
-  .soft-shadow {
-    box-shadow: rgba(255, 255, 255, 0.459) 0px 2px 1px,
-      rgba(255, 255, 255, 0.356) 0px 4px 2px,
-      rgba(255, 255, 255, 0.466) 0px 8px 4px,
-      rgba(255, 255, 255, 0.479) 0px 16px 8px,
-      rgba(255, 255, 255, 0.438) 0px 32px 16px;
+  .cart {
+    transition: box-shadow 0.7s ease-in-out;
+  }
+
+  .cart:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+      rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+      rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
 }
 
