@@ -4,7 +4,7 @@ import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
 
 const AboutSec = () => {
   return (
-    <div className="w-full flex flex-col justify-between items-center bg-[#F6EEE3] py-14">
+    <div className="w-full flex flex-col justify-between items-center bg-[#F6EEE3] pb-14 pt-18">
       <div className="main flex flex-row justify-between items-center  w-full">
         {/* Left Side Sction */}
         <div className="w-1/2 flex justify-center items-center">

@@ -21,7 +21,7 @@ export const ChooseUs = [
     {
       icons: GiShakingHands,
       title: "Custom Solutions",
-      description: "Tailored strategies that perfectly align with your unique business goals.",
+      description: "Tailored strategies that perfectly align with your unique business goals and long-term growth vision.",
     },
 
     {
@@ -39,7 +39,7 @@ export const ChooseUs = [
     {
       icons: BsTelephoneOutboundFill,
       title: "Ongoing Support",
-      description: "Reliable post-launch assistance to keep your business running smoothly.",
+      description: "Reliable post-launch assistance to keep your business running smoothly and evolving with confidence.",
     },
 
     {
@@ -57,7 +57,7 @@ export const ChooseUs = [
     {
       icons: GiStarMedal,
       title: "Proven Results",
-      description: "Consistent track record of delivering measurable business improvements.",
+      description: "A consistent track record of delivering measurable business improvements with proven, data-driven results.",
     },
 ]
 
@@ -72,7 +72,7 @@ export const Values = [
   {
     icons: IoCheckbox,
     title: "Quality Assurance",
-    description: "Every project undergoes strict testing and review, ensuring top-notch performance, reliability, and excellence before reaching our valued clients.",
+    description: "Every project undergoes strict testing and review, ensuring top-notch performance, reliability, and excellence through rigorous quality assurance before reaching our valued clients.",
   },
 
   {
@@ -125,3 +125,10 @@ export const AboutSecData = [
     title: "Reliable & scalable solutions",
   },
 ]
+
+export const countersData = [
+  { id: 1, value: 8, label: "Years of Experience" },
+  { id: 2, value: 1000, label: "Professional Creative Works Done" },
+  { id: 3, value: 300, label: "Website Under AMC" },
+  { id: 4, value: 15, label: "Team Members" },
+];

@@ -140,18 +140,28 @@ const Footer = () => {
               <div className="flex flex-col gap-4">
                 {Contact.map((item, index) => {
                   const Icon = item.icons;
-                  return (
-                    <div
-                      key={index}
-                      className="flex items-center gap-4 transition"
-                    >
+
+                  const Content = (
+                    <div className="flex items-start gap-4">
                       <Icon className="footerIcon transition-all duration-700 hover:scale-110 hover:text-blue-500" />
-                      <div className="flex flex-col justify-start items-center">
-                        <span className="footertext tracking-wider leading-6 hover:scale-110 transition-all duration-1200">
-                          {item.label}
-                        </span>
-                      </div>
+                      <span className="footertext tracking-wider leading-6 hover:scale-110 transition-all duration-1200">
+                        {item.label}
+                      </span>
                     </div>
+                  );
+
+                  return item.to ? (
+                    <a
+                      key={index}
+                      href={item.to}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="transition hover:opacity-80"
+                    >
+                      {Content}
+                    </a>
+                  ) : (
+                    <div key={index}>{Content}</div>
                   );
                 })}
               </div>
@@ -217,8 +227,25 @@ const Footer = () => {
 };
 
 export default Footer;
-{
-  /* <div className="border text-white text-center">Privacy Policy</div>
-            <div className="border text-white text-center">Privacy Policy</div>
-            <div className="border text-white text-center">Privacy Policy</div> */
-}
+
+// {
+//   Contact.map((item, index) => {
+//     const Icon = item.icons;
+//     return (
+//       <NavLink
+//         key={index}
+//         to={item.path}
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         className="flex items-center gap-4 transition"
+//       >
+//         <Icon className="footerIcon transition-all duration-700 hover:scale-110 hover:text-blue-500" />
+//         <div className="flex flex-col justify-start items-center">
+//           <span className="footertext tracking-wider leading-6 hover:scale-110 transition-all duration-1200">
+//             {item.label}
+//           </span>
+//         </div>
+//       </NavLink>
+//     );
+//   });
+// }

@@ -1,12 +1,11 @@
 import React from "react";
 import { Values } from "../../Data/AboutData";
 
-
 const AboutValues = () => {
   return (
-    <div className="w-full flex flex-col justify-center items-center bg-[#0A1A2F] py-14">
+    <section className="w-full flex flex-col justify-center items-center bg-[#0A1A2F] py-14">
       <div className="main w-full">
-        <div className="  w-full flex flex-col justify-center items-center gap-14">
+        <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
           <div className="w-full flex flex-col gap-10 ">
             {/* heading */}
@@ -37,11 +36,9 @@ const AboutValues = () => {
               );
             })}
           </div>
-
-
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
