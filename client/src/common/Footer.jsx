@@ -1,4 +1,9 @@
 import React from "react";
+import { useState } from "react";
+import { validateForm } from "../utils/formValidation";
+import { submitWithToast } from "../hooks/useFormSubmit";
+import EmailInputField from "../components/Form/EmailInputField";
+
 import { NavLink } from "react-router-dom";
 import { SeoData } from "../Data/FooterData";
 import { Service } from "../Data/FooterData";
@@ -8,6 +13,43 @@ import { Legal } from "../Data/FooterData";
 import { HiOutlineArrowCircleRight } from "react-icons/hi";
 
 const Footer = () => {
+  const [data, setData] = useState({
+    email: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const rules = {
+    email: "email",
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validationErrors = validateForm(data, rules);
+
+    if (!data.phone || data.phone.length < 10) {
+      validationErrors.phone = "Enter valid phone number";
+    }
+
+    if (Object.keys(validationErrors).length) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    await submitWithToast({
+      data,
+      pageKey: "contact-info",
+      successMsg: "Thanks! We will contact you soon.",
+      failMsg: "Submission failed. Try again.",
+      resetForm: () =>
+        setData({
+          email: "",
+        }),
+      setLoading,
+    });
+  };
   const columns = 4;
   const itemsPerColumn = Math.ceil(SeoData.length / columns);
 
@@ -37,11 +79,17 @@ const Footer = () => {
               </span>
 
               <div className="flex flex-col sm:flex-row w-150 items-stretch gap-2 sm:gap-3 border border-amber-50 rounded-lg p-2">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="w-full px-3 py-2 rounded-md outline-none bg-transparent footertext"
-                />
+                <form
+                  onSubmit={handleSubmit}
+                  className="flex flex-col justify-center items-center gap-4 w-full"
+                >
+                  <EmailInputField
+                    label={false}
+                    value={data.email}
+                    onChange={(value) => setData({ ...data, email: value })}
+                    error={errors?.email}
+                  />
+                </form>
 
                 <button type="submit" className="button w-full sm:w-auto">
                   Subscribe

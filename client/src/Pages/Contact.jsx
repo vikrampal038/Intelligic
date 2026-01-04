@@ -5,14 +5,10 @@ import Contacform from "../components/Contact/Contactform";
 import ContactFaq from "../components/Contact/ContactFaq";
 import ContactHero from "../components/Contact/ContactHero";
 import ContactSocial from "../components/Contact/ContactSocial";
-// import Contactbg from "/Assets/All Images/AllContact.jpg";
-// import Allbg from "/Assets/All Images/Contact.png";
-// import Allbg from "/Assets/All Images/AContact.png";
-// import Allbg from "/Assets/All Images/aacontact.webp";
 import Allbg from "/Assets/All Images/Aacontact.jpg";
 
 const Contact = () => {
-  const heroItem = HeroData.find((item) => item.page === "contact");
+  // const heroItem = HeroData.find((item) => item.page === "contact");
   return (
     <div>
       {/* for Hero Section */}

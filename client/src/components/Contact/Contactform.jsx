@@ -70,7 +70,8 @@ const Contactform = () => {
           </div>
 
           {/* for contact details */}
-          <div className="flex cart2 cart justify-center p-[20px] w-150 items-center gap-14 outline-1 outline-gray-200 rounded-lg ">
+          <div className="flex cart2 cart justify-center p-[20px] w-150 items-center gap-14 outline-1 bg-[#F5D6C3]
+ outline-gray-200 rounded-lg ">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col justify-center items-center gap-4 w-full"
@@ -111,7 +112,7 @@ const Contactform = () => {
 
               <button
                 disabled={loading}
-                className="w-full bg-black text-white py-2 rounded"
+                className="w-full cart2 bg-[#00AEEF] text-white py-2 rounded-md"
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>

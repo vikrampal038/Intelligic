@@ -129,7 +129,7 @@ const Enquirysec = () => {
 
               <button
                 disabled={loading}
-                className="w-full bg-black text-white py-2 rounded"
+                className="w-full cart2 bg-[#00AEEF] text-white py-2 rounded-md"
               >
                 {loading ? "Submitting..." : "Submit"}
               </button>
