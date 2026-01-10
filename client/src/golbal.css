@@ -39,7 +39,7 @@
   }
 
   .mainParagraph {
-    @apply text-[12px] sm:text-[14px] md:text-[16px] lg:text-[16px] font-medium capitalize  tracking-wide leading-7 text-[#7A7A7A];
+    @apply text-[12px] sm:text-[14px] md:text-[16px] font-medium capitalize  tracking-wide leading-7 text-[#7A7A7A];
   }
   .iconHeading {
     @apply text-[20px] text-[#0B97B8] shrink-0 transition-all duration-1200 hover:scale-110 hover:text-blue-500;

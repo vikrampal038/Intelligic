@@ -28,7 +28,7 @@ const ServiceSection = ({ section }) => {
           return (
             <div
               key={index}
-              className="cart2 flex bg-[#f7f7f7] flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
+              className="cart2   flex bg-[#f7f7f7] flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
             >
               <Icon className="icon" />
               <div className=" flex flex-col gap-4 justify-center items-start">

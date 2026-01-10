@@ -29,19 +29,19 @@ const cardVariants = {
 
 const HomeChoosUs = () => {
   return (
-    <section className="w-full flex flex-col justify-center items-center bg-[#0A1A2F] py-20">
-      <div className="main w-full border">
-        <div className=" w-full flex flex-col justify-center items-center gap-14 border">
+    <section className="w-full flex flex-col justify-center items-center pt-20">
+      <div className="main w-full">
+        <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
-          <div className="w-full flex flex-col gap-4 border ">
+          <div className="w-full flex flex-col justify-center items-center gap-3 ">
             {/* heading */}
-            <div className="w-fit subheadingbg flex justify-start items-center gap-3">
+            <div className="w-fit subheadingbg flex justify-center items-center gap-3">
               <HiSparkles className="iconHeading" />
               <h1 className="subHeading ">Why Choose Us</h1>
             </div>
             {/* subHeading */}
-            <div className="flex justify-between items-start">
-              <h2 className="mainHeading w-1/2 text-[#CCCCCC] ">
+            <div className="flex justify-between items-center">
+              <h2 className="mainHeading text-[#505050]">
                 Amazing Software, Built For You​
               </h2>
             </div>
@@ -49,7 +49,7 @@ const HomeChoosUs = () => {
 
           {/* Maine Section */}
           <motion.div
-            className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 border"
+            className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -64,7 +64,7 @@ const HomeChoosUs = () => {
                   boxShadow: "0px 18px 40px rgba(0,0,0,0.12)",
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6 border w-100 border-black rounded-lg p-[20px]"
+                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6  rounded-lg p-[20px]"
               >
                 <img
                   src={item.image}
@@ -74,7 +74,7 @@ const HomeChoosUs = () => {
 
                 <div className="flex flex-col gap-4 justify-center items-center">
                   <h3 className="subHeading">{item.title}</h3>
-                  <p className="mainParagraph text-center">{item.description}</p>
+                  <p className="mainParagraph text-center leading-5 xl:text-[14px]">{item.description}</p>
                 </div>
               </motion.div>
             ))}
