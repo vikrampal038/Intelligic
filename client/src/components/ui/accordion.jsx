@@ -56,8 +56,8 @@ function AccordionContent({ className, children, ...props }) {
         data-[state=open]:animate-accordion-down
         data-[state=closed]:animate-accordion-up
 
-        data-[state=open]:duration-[1100ms]
-        data-[state=closed]:duration-[1100ms]
+        data-[state=open]:duration-1100
+        data-[state=closed]:duration-1100
 
         data-[state=open]:ease-[cubic-bezier(0.4,0,0.2,1)]
         data-[state=closed]:ease-[cubic-bezier(0.4,0,0.2,1)]

@@ -13,7 +13,7 @@ const PortfolioCard = ({ image, title }) => {
           className="
             w-full
             transition-transform
-            duration-[3000ms]
+            duration-3000
             ease-linear
             group-hover:-translate-y-[65%]
           "

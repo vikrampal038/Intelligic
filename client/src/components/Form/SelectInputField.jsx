@@ -20,7 +20,7 @@ const SelectInputField = ({
           value={value}
           onChange={onChange}
           className={`input appearance-none pr-10 bg-white  font-normal ${
-            error ? "!border-red-500" : ""
+            error ? "border-red-500!" : ""
           }`}
         >
           <option className="placeholder:text-[12px] placeholder:text-[#7F7F7F]" value="">Select {label}</option>

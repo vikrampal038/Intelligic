@@ -77,6 +77,3 @@ function Counter() {
 }
 
 export default Counter;
-{
-  /* <span className="ml-1"></span> */
-}
