@@ -1,5 +1,5 @@
 import React from "react";
-import { HiSparkles } from "react-icons/hi2";
+import HomeHeading from "../../common/HomeHeading";
 import { HomeServicesData } from "../../Data/HomeData";
 
 const HomeServices = () => {
@@ -8,19 +8,10 @@ const HomeServices = () => {
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
-          <div className="w-full flex flex-col gap-4 justify-center items-center  ">
-            {/* heading */}
-            <div className="w-fit subheadingbg flex justify-center items-center gap-3">
-              <HiSparkles className="iconHeading" />
-              <h1 className="subHeading ">Our Services</h1>
-            </div>
-            {/* subHeading */}
-            <div className="flex justify-center items-center">
-              <h2 className="mainHeading text-[#505050] ">
-                From Concept to Reality: Building Tomorrow's Solutions Today
-              </h2>
-            </div>
-          </div>
+          <HomeHeading
+            mainHeading="Our Services"
+            subHeading="From Concept to Reality: Building Tomorrow's Solutions Today"
+          />
 
           {/* Maine Section */}
           <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  gap-6 ">

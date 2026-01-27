@@ -225,7 +225,7 @@ const Footer = () => {
                   <div
                     key={index}
                     to={item.path}
-                    className="footertext text-sm text-white  hover:text-gray-400 transition"
+                    className="footertext text-sm text-white  hover:text-gray-400 transition-all duration-700"
                   >
                     {item.label}
                   </div>
@@ -238,7 +238,7 @@ const Footer = () => {
         {/* For Third Section */}
         <div className=" px-5 sm:px-10 md:px-15 lg:px-20 w-full py-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-center gap-6 bg-black">
           {/* for copy write */}
-          <div className="footertext tracking-wider hover:scale-110 transition-all duration-1200 hover:translate-x-10">
+          <div className="footertext tracking-wider  transition-all duration-1200  hover:text-gray-400">
             <span className="text-start">
               © 2025 Intelligic Solutions. All rights reserved.
             </span>
@@ -274,25 +274,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// {
-//   Contact.map((item, index) => {
-//     const Icon = item.icons;
-//     return (
-//       <NavLink
-//         key={index}
-//         to={item.path}
-//         target="_blank"
-//         rel="noopener noreferrer"
-//         className="flex items-center gap-4 transition"
-//       >
-//         <Icon className="footerIcon transition-all duration-700 hover:scale-110 hover:text-blue-500" />
-//         <div className="flex flex-col justify-start items-center">
-//           <span className="footertext tracking-wider leading-6 hover:scale-110 transition-all duration-1200">
-//             {item.label}
-//           </span>
-//         </div>
-//       </NavLink>
-//     );
-//   });
-// }

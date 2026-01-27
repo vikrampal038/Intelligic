@@ -1,7 +1,7 @@
 import React from "react";
+import HomeHeading from "../../common/HomeHeading";
 import { motion } from "framer-motion";
 import { HomeChooseUs } from "../../Data/HomeData";
-import { HiSparkles } from "react-icons/hi2";
 
 const containerVariants = {
   hidden: {},
@@ -33,19 +33,10 @@ const HomeChoosUs = () => {
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
-          <div className="w-full flex flex-col justify-center items-center gap-3 ">
-            {/* heading */}
-            <div className="w-fit subheadingbg flex justify-center items-center gap-3">
-              <HiSparkles className="iconHeading" />
-              <h1 className="subHeading ">Why Choose Us</h1>
-            </div>
-            {/* subHeading */}
-            <div className="flex justify-between items-center">
-              <h2 className="mainHeading text-[#505050]">
-                Amazing Software, Built For You​
-              </h2>
-            </div>
-          </div>
+          <HomeHeading
+            mainHeading="Why Choose Us"
+            subHeading="Amazing Software, Built For You"
+          />
 
           {/* Maine Section */}
           <motion.div
@@ -74,7 +65,9 @@ const HomeChoosUs = () => {
 
                 <div className="flex flex-col gap-4 justify-center items-center">
                   <h3 className="subHeading">{item.title}</h3>
-                  <p className="mainParagraph text-center leading-5 xl:text-[14px]">{item.description}</p>
+                  <p className="mainParagraph text-center leading-5 xl:text-[14px]">
+                    {item.description}
+                  </p>
                 </div>
               </motion.div>
             ))}
