@@ -8,7 +8,7 @@ const HomeServices = () => {
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
-          <HomeHeading 
+          <HomeHeading  
             mainHeading="Our Services"
             subHeading="From Concept to Reality: Building Tomorrow's Solutions Today"
           />
@@ -24,7 +24,7 @@ const HomeServices = () => {
                   className="relative overflow-hidden group cart-shadow flex bg-[#f7f7f7]  flex-col justify-center items-center gap-6 border border-black rounded-lg p-[30px] transition-transform duration-700 ease-in-out"
                 >
                   {/* Square overlay */}
-                  <span className="absolute inset-0 bg-[#dad7d2] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
+                  <span className="absolute inset-0 bg-[#8be0ff42] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
 
                   <Icon className="icon z-10" />
                   <div className="flex flex-col gap-4 justify-center items-center relative z-10">

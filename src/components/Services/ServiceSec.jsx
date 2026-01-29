@@ -20,7 +20,7 @@ const ServiceSec = () => {
   }, [location]);
 // bg-[#F6EEE3]
   return (
-    <section className="topmain pt-15 pb-25 bg-white">
+    <section className="topmain">
       <div className="main w-full">
         <div className="  w-full flex flex-col justify-center items-center gap-14">
           {/* SectionHeading Section */}

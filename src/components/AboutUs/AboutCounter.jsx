@@ -52,7 +52,7 @@ function Counter() {
 
   return (
     // bg-[#F6EEE3]
-    <section className=" topmain pt-14 pb-25 bg-white">
+    <section className=" topmain">
       <div className="main  border-blue-900">
         <div
           ref={sectionRef}

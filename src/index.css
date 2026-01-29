@@ -114,6 +114,28 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+:root {
+  --brand-50: #f0fbff;
+  --brand-100: #e0f6ff;
+  --brand-200: #b9ecff;
+  --brand-300: #8be0ff;
+  --brand-400: #4fd2ff;
+  --brand-500: #00AEEF;
+}
+
+/* Gradients using CSS variables */
+.bg-gradient-brand-50-100-200 {
+  background: linear-gradient(to bottom, var(--brand-50), var(--brand-100), var(--brand-200));
+}
+
+.bg-gradient-brand-200-100-50 {
+  background: linear-gradient(to bottom, var(--brand-200), var(--brand-100), var(--brand-50));
+}
+
+
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -168,4 +190,33 @@
   transform: perspective(1200px) rotateY(0deg) scale(1);
   opacity: 1;
   z-index: 10;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* WordPress block fixes */
+.wp-block-image {
+  margin: 2rem auto;
+}
+
+.wp-block-image img {
+  height: auto;
+  max-width: 100%;
+}
+
+.wp-block-gallery {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.wp-block-gallery img {
+  border-radius: 12px;
+}
+
+.prose figure {
+  margin: 2rem auto;
 }

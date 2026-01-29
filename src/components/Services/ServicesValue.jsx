@@ -1,22 +1,11 @@
 import React from "react";
-import servicebg from "/Assets/All Images/Servicevaluebg.jpg";
 import { ValueData } from "../../Data/ServiceData";
 import Progress from "../../common/Progress";
 import { HiSparkles } from "react-icons/hi2";
 
 const ServicesValue = () => {
   return (
-    <section
-      className="topmain pb-25"
-      style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
-        url(${servicebg})`,
-        backgroundAttachment: "fixed",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="topmain pb-25">
       <div className="main flex flex-row justify-between items-center  w-full">
         {/* left Side Bar */}
         <div className="w-1/2 flex flex-col justify-center items-start gap-8">
@@ -27,8 +16,8 @@ const ServicesValue = () => {
               <h1 className="subHeading">Our Value</h1>
             </div>
             {/* <h1 className="subHeading text-white">Our Value</h1> */}
-            <h2 className="mainHeading text-[#C5C5C5]">Big Data Analyzer</h2>
-            <p className="mainParagraph text-[#CCCCCC]">
+            <h2 className="mainHeading text-white">Big Data Analyzer</h2>
+            <p className="mainParagraph text-white">
               We build custom digital solutions with unwavering integrity, while
               our innovative spirit drives us to exceed your expectations in
               every project.
@@ -70,3 +59,17 @@ const ServicesValue = () => {
 };
 
 export default ServicesValue;
+
+
+
+
+// import servicebg from "/Assets/All Images/Servicevaluebg.jpg";
+
+// style={{
+//   backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+//   url(${servicebg})`,
+//   backgroundAttachment: "fixed",
+//   backgroundPosition: "center",
+//   backgroundRepeat: "no-repeat",
+//   backgroundSize: "cover",
+// }}

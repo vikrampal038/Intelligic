@@ -29,7 +29,7 @@ const cardVariants = {
 
 const HomeChoosUs = () => {
   return (
-    <section className="topmain ">
+    <section className="topmain">
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
@@ -55,7 +55,7 @@ const HomeChoosUs = () => {
                   boxShadow: "0px 18px 40px rgba(0,0,0,0.12)",
                 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6  rounded-lg p-[20px]"
+                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6  rounded-lg p-[20px] border border-slate-500"
               >
                 <img
                   src={item.image}

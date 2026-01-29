@@ -1,6 +1,4 @@
 import React from "react";
-// import GlobalHero from "../common/GlobalHero";
-// import { HeroData } from "../Data/HeroData";
 import AboutSec from "../components/AboutUs/AboutSec";
 import AboutChoose from "../components/AboutUs/AboutChoose";
 import AboutSkill from "../components/AboutUs/AboutSkill";
@@ -8,24 +6,36 @@ import AboutValues from "../components/AboutUs/AboutValues";
 import AboutCounter from "../components/AboutUs/AboutCounter";
 
 const About = () => {
-  // 👉 FIND + STORE
-  // const heroItem = HeroData.find((item) => item.page === "about");
-
   return (
     <div className="w-full">
-      {/* Hero Section */}
-      {/* <GlobalHero item={heroItem} /> */}
-
-      {/* Page Content */}
-      <div>
-        <AboutSec />
-        <AboutCounter />
-        <AboutValues />
-        <AboutSkill />
-        <AboutChoose />
-      </div>
+        <section className="bg-gradient-brand-50-100-200 pb-24 pt-14 ">
+          <AboutSec />
+        </section>
+        <section className="bg-gradient-brand-200-100-50 pb-24">
+          <AboutCounter />
+        </section>
+        <section>
+          <AboutValues />
+        </section>
+        <section className="bg-gradient-brand-50-100-200 pt-24">
+          <AboutSkill />
+        </section>
+        <section className="bg-gradient-brand-200-100-50 py-24">
+          <AboutChoose />
+        </section>
     </div>
   );
 };
 
 export default About;
+
+// import GlobalHero from "../common/GlobalHero";
+// import { HeroData } from "../Data/HeroData";
+
+// const heroItem = HeroData.find((item) => item.page === "about");
+{
+  /* Hero Section */
+}
+{
+  /* <GlobalHero item={heroItem} /> */
+}

@@ -1,32 +1,19 @@
 import React from "react";
 import { HiSparkles } from "react-icons/hi2";
-import { motion } from "framer-motion";
 import { HomeSocial } from "../../Data/HomeData";
-
+import HandleMouseLeave from "@/common/HandleMouseLeave";
 const HomeAbout = () => {
   return (
-    <section className="topmain bg-white">
+    <section className="topmain">
       <div className="main flex flex-row justify-between items-center w-full">
         {/* Left Side Sction */}
-        <motion.div
-          className="w-1/2 flex justify-center items-center"
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <motion.img
-            src="Assets/All Images/HomeAbout.avif"
-            className="cart w-100  rounded-2xl bg-white p-2"
+        <div className="w-1/2 flex justify-center items-center ">
+          <HandleMouseLeave
+            src="Assets/All Images/HomeAbout.webp"
+            className="w-100 rounded-2xl p-2 normal-shadow"
             alt="OurSkill Section Image"
-            whileHover={{
-              scale: 1.03,
-              boxShadow: "0px 22px 45px rgba(0,0,0,0.14)",
-              filter: "brightness(1.05)",
-            }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
           />
-        </motion.div>
+        </div>
 
         {/* Right Side Bar */}
         <div className="  w-1/2 flex flex-col justify-start items-center gap-12">

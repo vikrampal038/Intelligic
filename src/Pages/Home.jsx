@@ -12,17 +12,30 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-        <HomeHero />
+      <HomeHero />
       <div>
-        <HomeAbout />
-        <HomeChoosUs />
-        <HomePortfolio />
-        <HomeServices />
-        <HomeBlog />
-        <HomeTestimonial />
+        <section className="bg-gradient-brand-50-100-200 py-24">
+          <HomeAbout />
+        </section>
+        <section className="bg-gradient-brand-200-100-50">
+          <HomeChoosUs />
+        </section>
+        <section className="bg-gradient-brand-50-100-200 py-24">
+          <HomePortfolio />
+        </section>
+        <section className="bg-gradient-brand-200-100-50">
+          <HomeServices />
+        </section>
+        <section className="bg-gradient-brand-50-100-200 py-24">
+          <HomeTestimonial />
+        </section>
       </div>
     </div>
   );
 };
 
 export default Home;
+
+{
+  /* <HomeBlog /> */
+}

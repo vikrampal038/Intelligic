@@ -4,7 +4,7 @@ import { HiSparkles } from "react-icons/hi2";
 
 const AboutChoose = () => {
   return (
-    <section className="topmain pb-25 bg-[#f7f7f7] ">
+    <section className="topmain">
       <div className="main w-full">
         <div className="  w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
@@ -19,7 +19,7 @@ const AboutChoose = () => {
               <h2 className="mainHeading w-1/2 ">
                 The Ultimate Source of Software
               </h2>
-              <p className="mainParagraph w-1/2  ">
+              <p className="mainParagraph w-1/2 text-black  ">
                 Delivering innovative, reliable, and customized software
                 solutions that empower businesses, enhance efficiency, and drive
                 growth in today’s competitive digital landscape.
@@ -34,7 +34,7 @@ const AboutChoose = () => {
               return (
                 <div
                   key={index}
-                  className="cart flex bg-white flex-col justify-center items-start gap-6 rounded-lg p-[30px]"
+                  className="cart flex bg-[#f7f7f7] border border-slate-500 flex-col justify-center items-start gap-6 rounded-lg p-[30px]"
                 >
                   <Icon className="icon" />
                   <div className="flex flex-col gap-4 justify-center items-start">

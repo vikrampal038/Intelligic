@@ -64,7 +64,7 @@ const Enquirysec = () => {
     });
   };
   return (
-    <section className="topmain pb-25">
+    <section className="topmain">
       <div className="main w-full">
         <div className="w-full flex flex-col justify-center items-center gap-10">
           {/* for Heading */}
@@ -74,13 +74,13 @@ const Enquirysec = () => {
           </div>
           <div className="w-full flex flex-col justify-center items-center gap-3">
             <h2 className="mainHeading">We’re Here to Help You</h2>
-            <p className="mainParagraph">
+            <p className="mainParagraph text-[18px]">
               Fill out this form to send your inquires to Intelligic Solutions.
             </p>
           </div>
 
           {/* for contact details */}
-          <div className="flex cart-shadow justify-center py-[30px] px-[20px] w-150 items-center gap-14 bg-[#E4E1E3] rounded-lg  ">
+          <div className="flex cart-shadow justify-center py-[30px] px-[20px] w-150 items-center gap-14 bg-[#b9ecff4d] rounded-lg  ">
             <form
               onSubmit={handleSubmit}
               className="flex flex-col justify-center items-center gap-4 w-full"

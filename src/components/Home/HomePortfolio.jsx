@@ -4,10 +4,10 @@ import PortfolioCard from "../../common/PortfolioCard";
 
 // images
 import site1 from "../../Assets/Images/amengineers.png";
-import site2 from "../../Assets/Images/marigoldpaints.png";
+// import site2 from "../../Assets/Images/marigoldpaints.png";
 import site3 from "../../Assets/Images/orienteeringfederationofindia.png";
 import site4 from "../../Assets/Images/riseonelevators.png";
-import site5 from "../../Assets/Images/sevatirthcharitabletrust.png";
+// import site5 from "../../Assets/Images/sevatirthcharitabletrust.png";
 import site6 from "../../Assets/Images/technokraftsol.png";
 
 const HomePortfolio = () => {

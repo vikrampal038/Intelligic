@@ -50,12 +50,12 @@ const Testiminoal = () => {
                   selectedIndex === index ? "is-selected" : ""
                 }`}
               >
-                <div className=" w-[330px] h-[310px] bg-[#9f9a93] text-center rounded-xl p-6 shadow-lg transition-all duration-500 flex flex-col gap-4">
+                <div className="cart-shadow  w-[330px] h-[310px] bg-[#f7f7f7] text-center rounded-xl p-6 shadow-lg transition-all duration-500 flex flex-col gap-4">
                   <div className="flex justify-center">
                     <FaUsers className="text-black text-6xl" />
                   </div>
 
-                  <div className="flex flex-col justify-center items-center gap-2">
+                  <div className=" flex flex-col justify-center items-center gap-2">
                     <h3 className="subHeading">{item.name}</h3>
 
                     <p className="label">{item.title}</p>

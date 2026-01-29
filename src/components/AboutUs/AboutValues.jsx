@@ -4,7 +4,7 @@ import { HiSparkles } from "react-icons/hi2";
 
 const AboutValues = () => {
   return (
-    <section className="topmain pb-25 bg-[#0A1A2F]">
+    <section className="topmain py-24 bg-[#0A1A2F] ">
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
@@ -14,7 +14,6 @@ const AboutValues = () => {
               <HiSparkles className="iconHeading" />
               <h1 className="subHeading ">Our Values</h1>
             </div>
-            {/* <h1 className="subHeading subheadingbg w-fit ">Our Values</h1> */}
             {/* subHeading */}
             <div className="flex justify-between items-start">
               <h2 className="mainHeading w-1/2 text-[#CCCCCC] ">
@@ -34,7 +33,7 @@ const AboutValues = () => {
                   className="relative overflow-hidden group cart-shadow flex bg-[#f7f7f7]  flex-col justify-center items-start gap-6 border border-black rounded-lg p-[30px] transition-transform duration-700 ease-in-out"
                 >
                   {/* Square overlay */}
-                  <span className="absolute inset-0 bg-[#dad7d2] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
+                  <span className="absolute inset-0 bg-[#8be0ff42] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
 
                   <Icon className="icon z-10" />
                   <div className="flex flex-col gap-4 justify-center items-start relative z-10">

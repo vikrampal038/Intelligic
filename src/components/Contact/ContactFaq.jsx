@@ -8,7 +8,7 @@ const ContactFaq = () => {
   return (
     // bg-[#FEFEFF]
     // bg-[#E4E1E3]
-    <section className="topmain pb-25">
+    <section className="topmain">
       <div className="main w-full">
         <div className="w-full flex flex-col justify-center items-center gap-8">
           {/* SectionHeading Section */}

@@ -1,6 +1,4 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
-// import { PiArrowBendDoubleUpRightBold } from "react-icons/pi";
 import ServicePopup from "../common/ServicePopup";
 import { ServiceDetails } from "../Data/ServiceDetails";
 
@@ -22,24 +20,18 @@ const ServiceSection = ({ section }) => {
 
           // 🔑 MATCH CARD WITH DETAILS (by id)
           const serviceDetail = ServiceDetails.find(
-            (item) => item.id === card.id
+            (item) => item.id === card.id,
           );
 
           return (
             <div
               key={index}
-              className="cart2   flex bg-[#f7f7f7] flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
+              className="cart2 flex bg-[#f7f7f7] border border-slate-500 flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
             >
               <Icon className="icon" />
               <div className=" flex flex-col gap-4 justify-center items-start">
                 <h3 className="subHeading">{card.title}</h3>
                 <p className="mainParagraph ">{card.description}</p>
-                {/* <NavLink
-                  to="/contact"
-                  className="group bg-transparent text-[#54B4CD] text-[30px] border-2 rounded-lg border-black px-3 py-2 font-bold inline-flex items-center justify-center"
-                >
-                  <PiArrowBendDoubleUpRightBold className="transition-transform duration-300 ease-in-out group-hover:rotate-45" />
-                </NavLink> */}
 
                 {ServiceDetails && <ServicePopup service={serviceDetail} />}
               </div>
@@ -52,3 +44,16 @@ const ServiceSection = ({ section }) => {
 };
 
 export default ServiceSection;
+
+
+
+// import { NavLink } from "react-router-dom";
+// import { PiArrowBendDoubleUpRightBold } from "react-icons/pi";
+
+{
+  /* <NavLink
+      to="/contact"
+      className="group bg-transparent text-[#54B4CD] text-[30px] border-2 rounded-lg border-black px-3 py-2 font-bold inline-flex items-center justify-center">
+      <PiArrowBendDoubleUpRightBold className="transition-transform duration-300 ease-in-out group-hover:rotate-45" />
+    </NavLink> */
+}

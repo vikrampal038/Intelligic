@@ -66,7 +66,7 @@ const Footer = () => {
           <div className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-start gap-6 ">
             <div className="flex justify-start items-start">
               <img
-                src="Assets/Logo/intelligic.png"
+                src="./Assets/Logo/intelligic.png"
                 alt="Footer logo"
                 className="w-32 sm:w-40 md:w-48 h-auto object-contain"
               />

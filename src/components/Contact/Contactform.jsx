@@ -2,11 +2,11 @@ import React from "react";
 import { useState } from "react";
 import { validateForm } from "../../utils/formValidation";
 import { submitWithToast } from "../../hooks/useFormSubmit";
-import NameInputField from "../../components/Form/NameinputField";
-import EmailInputField from "../../components/Form/EmailInputField";
-import PhoneInputField from "../../components/Form/PhoneInputField";
-import TextInputField from "../../components/Form/TextInputField";
-import TextareaField from "../../components/Form/TextareaField";
+import NameInputField from "../Form/NameinputField";
+import EmailInputField from "../Form/EmailInputField";
+import PhoneInputField from "../Form/PhoneInputField";
+import TextInputField from "../Form/TextInputField";
+import TextareaField from "../Form/TextareaField";
 
 const Contactform = () => {
   const [data, setData] = useState({

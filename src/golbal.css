@@ -10,13 +10,13 @@
   }
 
   .topmain{
-    @apply w-full flex flex-col justify-center items-center pt-25;
+    @apply w-full flex flex-col justify-center items-center;
   }
 }
 
 @layer components {
   .mainHeading {
-    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-semibold capitalize tracking-wider leading-4 lg:leading-14 text-[#505050];
+    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-semibold capitalize tracking-wider leading-4 lg:leading-14 text-[#000000];
   }
 
   .subHeading {
@@ -24,7 +24,7 @@
   }
 
   .subheadingbg{
-    @apply bg-gray-300 rounded-3xl py-0.5 px-5
+    @apply bg-white rounded-3xl py-0.5 px-5 border-2 border-[#00AEEF] hover:bg-[#4fd2ff]  transition-all duration-1200 ease-in-out
   }
 
   .label {
@@ -39,14 +39,14 @@
     @apply text-[14px] lg:text-[16px] font-bold capitalize  tracking-wider text-black;
   }
   .text {
-    @apply text-[14px] lg:text-[16px] text-black font-bold capitalize tracking-wider text-start;
+    @apply text-[14px] lg:text-[16px] text-black font-bold capitalize text-start;
   }
 
   .mainParagraph {
-    @apply text-[12px] sm:text-[14px] md:text-[16px] font-medium capitalize  tracking-wide leading-7 text-[#7A7A7A];
+    @apply text-[12px] sm:text-[14px] md:text-[16px] font-medium capitalize  tracking-wide leading-7 text-[#4b4b4b];
   }
   .iconHeading {
-    @apply text-[20px] text-[#0B97B8] shrink-0 transition-all duration-1200 hover:scale-110 hover:text-blue-500;
+    @apply text-[20px] text-[#0B97B8] shrink-0 hover:text-[#e0f6ff] transition-all duration-1200  ease-in-out ;
   }
 
   .icon {

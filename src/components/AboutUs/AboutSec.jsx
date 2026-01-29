@@ -6,7 +6,7 @@ import { HiSparkles } from "react-icons/hi2";
 const AboutSec = () => {
   return (
     // bg-[#F6EEE3]
-    <section className="topmain bg-white pt-15 pb-25">
+    <section className="topmain">
       <div className="main flex flex-row justify-between items-center  w-full">
         {/* Left Side Sction */}
         <div className="w-1/2 flex justify-center items-center">
@@ -31,12 +31,12 @@ const AboutSec = () => {
               </h2>
             </div>
             <div className="flex flex-col gap-4">
-              <p className="mainParagraph text-[#7A7A7A]">
+              <p className="mainParagraph">
                 Our goal is not just to create cutting-edge software, but to
                 forge a relationship built on a foundation of trust and mutual
                 understanding. We view your goals as our own.
               </p>
-              <p className="mainParagraph text-[#7A7A7A]">
+              <p className="mainParagraph">
                 On the strength of technology and the foundation of trust, we
                 help take your business to new heights.
               </p>
