@@ -4,11 +4,11 @@ import { HomeServicesData } from "../../Data/HomeData";
 
 const HomeServices = () => {
   return (
-    <section className="topmain">
+    <section className="topmain bg-gray-200 pb-25">
       <div className="main w-full">
         <div className=" w-full flex flex-col justify-center items-center gap-14">
           {/* Heading Section */}
-          <HomeHeading 
+          <HomeHeading  
             mainHeading="Our Services"
             subHeading="From Concept to Reality: Building Tomorrow's Solutions Today"
           />

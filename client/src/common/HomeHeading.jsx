@@ -15,7 +15,7 @@ const HomeHeading = ({ mainHeading, subHeading }) => {
 
       {/* Main Heading */}
       <div className="flex justify-center items-center">
-        <h2 className="mainHeading text-[#505050]">
+        <h2 className="mainHeading">
           {subHeading}
         </h2>
       </div>

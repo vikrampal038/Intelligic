@@ -10,13 +10,13 @@
   }
 
   .topmain{
-    @apply w-full flex flex-col justify-center items-center pt-25;
+    @apply w-full flex flex-col justify-center items-center;
   }
 }
 
 @layer components {
   .mainHeading {
-    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-semibold capitalize tracking-wider leading-4 lg:leading-14 text-[#505050];
+    @apply text-[25px] sm:text-[30px] md:text-[35px] lg:text-[40px] font-semibold capitalize tracking-wider leading-4 lg:leading-14 text-[#000000];
   }
 
   .subHeading {

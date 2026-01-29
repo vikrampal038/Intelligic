@@ -1,20 +1,24 @@
 import React from "react";
-// import GlobalHero from "../common/GlobalHero";
-// import { HeroData } from "../Data/HeroData";
 import ServiceSec from "../components/Services/ServiceSec";
 import ServicesAnalyzer from "../components/Services/ServicesAnalyzer";
 import ServicesConnect from "../components/Services/ServicesConnect";
-import ServiceValue from "../components/Services/ServicesValue"
+import ServiceValue from "../components/Services/ServicesValue";
+import servicebg from "/Assets/All Images/Servicevaluebg.jpg";
 
 const Services = () => {
-  // const heroItem = HeroData.find((item) => item.page === "services");
   return (
-    <div>
-      {/* Hero Section */}
-      {/* <GlobalHero item={heroItem} /> */}
-      {/* Page Contain */}
-      <div>
-        <ServiceSec />
+    <div className="relative overflow-hidden">
+      <ServiceSec />
+      <div
+        style={{
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url(${servicebg})`,
+          backgroundAttachment: "fixed",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+        }}
+      >
         <ServiceValue />
         <ServicesAnalyzer />
         <ServicesConnect />
@@ -24,3 +28,22 @@ const Services = () => {
 };
 
 export default Services;
+
+//  import Prism from "@/common/Prism";
+//  import GlobalHero from "../common/GlobalHero";
+//  import { HeroData } from "../Data/HeroData";
+
+//  const heroItem = HeroData.find((item) => item.page === "services");
+
+// {
+//    Hero Section 
+// }
+// {
+//    <GlobalHero item={heroItem} /> 
+// }
+// {
+//    Page Contain 
+// }
+// {
+//    <Prism /> 
+// }
