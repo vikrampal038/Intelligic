@@ -34,7 +34,7 @@ const AboutChoose = () => {
               return (
                 <div
                   key={index}
-                  className="cart flex bg-[#f7f7f7] border border-slate-500 flex-col justify-center items-start gap-6 rounded-lg p-[30px]"
+                  className="normal-shadow hover:scale-1.020 transition-transform duration-3000 ease-linear bg-[#e0f6ff] border border-slate-500 flex flex-col justify-center items-start gap-6 rounded-lg p-[30px]"
                 >
                   <Icon className="icon" />
                   <div className="flex flex-col gap-4 justify-center items-start">

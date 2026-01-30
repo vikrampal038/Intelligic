@@ -8,7 +8,7 @@ const ServiceSection = ({ section }) => {
       id={section.id}
       className=" w-full flex flex-col justify-center items-center gap-6 scroll-mt-10"
     >
-      <div className="w-full flex flex-col justify-center items-start gap-5">
+      <div className="w-full flex flex-col justify-center items-start gap-3">
         <h3 className="subHeading">{section.sectionTitle}</h3>
         <p className="mainParagraph w-1/2">{section.sectionPara}</p>
       </div>
@@ -26,10 +26,10 @@ const ServiceSection = ({ section }) => {
           return (
             <div
               key={index}
-              className="cart2 flex bg-[#f7f7f7] border border-slate-500 flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
+              className="cart flex bg-[#b9ecff]  flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
             >
               <Icon className="icon" />
-              <div className=" flex flex-col gap-4 justify-center items-start">
+              <div className=" flex flex-col gap-2 justify-center items-start">
                 <h3 className="subHeading">{card.title}</h3>
                 <p className="mainParagraph ">{card.description}</p>
 

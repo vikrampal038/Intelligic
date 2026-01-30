@@ -1,6 +1,8 @@
 import React from "react";
+import HandleMouseLeave from "@/common/HandleMouseLeave";
 import { AboutSecData } from "../../Data/AboutData";
-import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+// import { IoCheckmarkDoneCircleSharp } from "react-icons/io5";
+import { BiSolidCheckShield } from "react-icons/bi";
 import { HiSparkles } from "react-icons/hi2";
 
 const AboutSec = () => {
@@ -52,7 +54,7 @@ const AboutSec = () => {
                   to={item.path}
                   className="flex items-center gap-4 transition w-full"
                 >
-                  <IoCheckmarkDoneCircleSharp className="footerIcon" />
+                  <BiSolidCheckShield className="footerIcon" />
                   <div className="flex flex-col group relative h-[22px] w-[250px] overflow-hidden">
                     <span className="listText animationtext">{item.title}</span>
                     <span className="listText animationtexthover">

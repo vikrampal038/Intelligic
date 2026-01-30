@@ -14,7 +14,7 @@ const Home = () => {
       {/* Hero Section */}
       <HomeHero />
       <div>
-        <section className="bg-gradient-brand-50-100-200 py-24">
+        <section className="bg-gradient-brand-50-100-200 pb-14 pt-14">
           <HomeAbout />
         </section>
         <section className="bg-gradient-brand-200-100-50">

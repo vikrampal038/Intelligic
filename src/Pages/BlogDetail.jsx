@@ -13,7 +13,7 @@ const BlogDetail = () => {
   if (!blog) return null;
 
   return (
-    <article className="max-w-4xl mx-auto px-4 py-12">
+    <article className="max-w-4xl mx-auto px-4 pb-24 pt-14">
       {/* Featured Image */}
       {blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
         <img

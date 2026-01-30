@@ -10,7 +10,8 @@ import { Service } from "../Data/FooterData";
 import { Social } from "../Data/FooterData";
 import { Contact } from "../Data/FooterData";
 import { Legal } from "../Data/FooterData";
-import { HiOutlineArrowCircleRight } from "react-icons/hi";
+// import { HiOutlineArrowCircleRight } from "react-icons/hi";
+import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Footer = () => {
   const [data, setData] = useState({
@@ -54,14 +55,14 @@ const Footer = () => {
   const itemsPerColumn = Math.ceil(SeoData.length / columns);
 
   const seoColumns = Array.from({ length: columns }, (_, i) =>
-    SeoData.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn)
+    SeoData.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn),
   );
 
   return (
     <div className="w-full ">
-      <div className="flex flex-col justify-center items-center w-full bg-black">
+      <div className="flex flex-col justify-center items-center w-full bg-gradient-brand-400-300-400">
         {/* For First Section */}
-        <div className=" px-5 sm:px-10 md:px-15 lg:px-20 w-full py-16 flex justify-center flex-col items-center gap-10 bg-black">
+        <div className=" px-5 sm:px-50 md:px-25 lg:px-35 w-full py-16 flex justify-center flex-col items-center gap-10 bg-gradient-brand-400-300-400">
           {/* For Logo And Email Section */}
           <div className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-start gap-6 ">
             <div className="flex justify-start items-start">
@@ -78,20 +79,30 @@ const Footer = () => {
                 Subscribe to our newsletter for latest updates
               </span>
 
-              <div className="flex flex-col sm:flex-row w-150 items-stretch gap-2 sm:gap-3 border  border-amber-50 rounded-lg p-2">
+              <div className="flex flex-col sm:flex-row w-150 items-stretch gap-2 sm:gap-3 border  border-slate-500 rounded-lg p-2">
                 <form
                   onSubmit={handleSubmit}
-                  className="flex justify-center items-center gap-4 w-full"
+                  className="flex justify-center items-start gap-4 w-full"
                 >
                   <EmailInputField
                     label={false}
                     value={data.email}
                     onChange={(value) => setData({ ...data, email: value })}
                     error={errors?.email}
-                    className='borer-none'
+                    className="borer-none"
                   />
-                  <button type="submit" className="button w-full sm:w-auto">
+                  {/* <button type="submit" className="button w-full sm:w-auto">
                     Subscribe
+                  </button> */}
+
+                  <button
+                    className="relative group overflow-hidden button w-full sm:w-auto   inline-flex items-center justify-center"
+                  >
+                    {/* Hover background */}
+                    <span className="absolute inset-0 bg-[#8be0ff5b] border rounded-lg -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
+
+                    {/* Button text */}
+                    <span className="relative z-10">Subscribe</span>
                   </button>
                 </form>
               </div>
@@ -103,14 +114,14 @@ const Footer = () => {
             {/* For Services Link */}
             <div className=" flex flex-col gap-6">
               <h1 className="footerHeading">Services</h1>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col gap-3">
                 {Service.map((item, index) => (
                   <NavLink
                     key={index}
                     to={item.path}
-                    className="flex items-center gap-4 transition"
+                    className="flex items-center gap-3 transition"
                   >
-                    <HiOutlineArrowCircleRight className="footerIcon" />
+                    <FaAngleDoubleRight className="footerIcon" />
                     <div className="flex flex-col group relative h-[22px] w-[180px] overflow-hidden">
                       <span className="footertext animationtext">
                         {item.label}
@@ -137,9 +148,9 @@ const Footer = () => {
                 <NavLink
                   key={index}
                   to={item.to}
-                  className="flex items-center gap-4 transition"
+                  className="flex items-center gap-3 transition"
                 >
-                  <HiOutlineArrowCircleRight className="footerIcon" />
+                  <FaAngleDoubleRight className="footerIcon" />
                   <div className="flex flex-col group relative h-[22px] w-[180px] overflow-hidden">
                     <span className="footertext animationtext">
                       {item.label}
@@ -217,15 +228,15 @@ const Footer = () => {
         </div>
 
         {/* For Second Section  */}
-        <div className="px-5 sm:px-10 md:px-15 lg:px-20 w-full bg-[#575757] py-8 ">
+        <div className="px-5 sm:px-15 md:px-25 lg:px-35 w-full bg-[#8a8a8a8e] py-6 ">
           <div className="w-full  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             {seoColumns.map((column, colIndex) => (
-              <div key={colIndex} className="flex flex-col gap-2">
+              <div key={colIndex} className="flex flex-col gap-1">
                 {column.map((item, index) => (
                   <div
                     key={index}
                     to={item.path}
-                    className="footertext text-sm text-white  hover:text-gray-400 transition-all duration-700"
+                    className="footertext text-sm hover:text-gray-200 transition-all duration-900 ease-in-out"
                   >
                     {item.label}
                   </div>
@@ -236,9 +247,9 @@ const Footer = () => {
         </div>
 
         {/* For Third Section */}
-        <div className=" px-5 sm:px-10 md:px-15 lg:px-20 w-full py-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-center gap-6 bg-black">
+        <div className=" px-5 sm:px-15 md:px-25 lg:px-35 w-full py-4  grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-center gap-6 bg-gradient-brand-400-300-400">
           {/* for copy write */}
-          <div className="footertext tracking-wider  transition-all duration-1200  hover:text-gray-400">
+          <div className="footertext tracking-wider  transition-all duration-1200  hover:text-gray-600">
             <span className="text-start">
               © 2025 Intelligic Solutions. All rights reserved.
             </span>

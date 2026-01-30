@@ -6,7 +6,7 @@ const HomeHero = () => {
   // 👉 FIND + STORE
     const heroItem = HeroData.find((item) => item.page === "/");
   return (
-    <div className='border w-full h-screen'>
+    <div className='border w-full'>
        <GlobalHero item={heroItem} />
     </div>
   )

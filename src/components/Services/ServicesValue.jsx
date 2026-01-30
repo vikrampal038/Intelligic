@@ -34,7 +34,7 @@ const ServicesValue = () => {
                   className="normal-shadow relative overflow-hidden group flex bg-transparent justify-center items-center gap-6 rounded-lg p-[20px] transition-transform duration-700 ease-in-out"
                 >
                   {/* Square overlay */}
-                  <span className=" absolute inset-0 bg-[#dad7d263] -translate-x-full group-hover:translate-x-0 transition-transform duration-1200 ease-in-out z-0"></span>
+                  <span className=" absolute inset-0 bg-[#8be0ff1a] -translate-x-full group-hover:translate-x-0 transition-transform duration-1200 ease-in-out z-0"></span>
 
                   <Icon className="icon text-[45px] z-10" />
                   <div className="flex flex-col gap-4 justify-center items-start relative z-10">

@@ -43,7 +43,7 @@ const HomeAbout = () => {
             </div>
 
             {/* social icons */}
-            <div className=" flex flex-col gap-6">
+            {/* <div className=" flex flex-col gap-6">
               <div className="flex justify-center items-center gap-4">
                 {HomeSocial.map((item, index) => {
                   const Icon = item.icons;
@@ -60,7 +60,7 @@ const HomeAbout = () => {
                   );
                 })}
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

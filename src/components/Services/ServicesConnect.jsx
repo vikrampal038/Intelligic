@@ -24,8 +24,21 @@ const Section = () => {
               combine our expertise with your unique vision to build something
               truly amazing together.
             </p>
-            <NavLink to="/contact" className="button ">
+            
+            {/* <NavLink to="/contact" className="button">
+              <span className="absolute inset-0 bg-[#8be0ff1a] -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
               Get Started
+            </NavLink> */}
+
+            <NavLink
+              to="/contact"
+              className="relative group overflow-hidden button  inline-flex items-center justify-center"
+            >
+              {/* Hover background */}
+              <span className="absolute inset-0 bg-[#8be0ff5b] border rounded-lg -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
+
+              {/* Button text */}
+              <span className="relative z-10">Get Started</span>
             </NavLink>
           </div>
         </div>
