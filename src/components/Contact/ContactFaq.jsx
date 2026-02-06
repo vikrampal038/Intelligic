@@ -21,7 +21,7 @@ const ContactFaq = () => {
           </div>
 
           {/* Faq Section  */}
-          <div className="w-full flex justify-center items-center gap-14">
+          <div className="w-full flex flex-col xl:flex-row justify-center items-center gap-10 xl:gap-14">
             {/* About Company */}
             <div className="w-full flex flex-col justify-center items-center gap-6">
               <div className="flex  justify-center items-center gap-4">

@@ -9,12 +9,12 @@ const ServiceSection = ({ section }) => {
       className=" w-full flex flex-col justify-center items-center gap-6 scroll-mt-10"
     >
       <div className="w-full flex flex-col justify-center items-start gap-3">
-        <h3 className="subHeading">{section.sectionTitle}</h3>
-        <p className="mainParagraph">{section.sectionPara}</p>
+        <h3 className="subHeading text-start">{section.sectionTitle}</h3>
+        <p className="mainParagraph text-start">{section.sectionPara}</p>
       </div>
 
       {/* Service Cart */}
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  gap-6">
+      <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3  gap-6">
         {section.cards.map((card, index) => {
           const Icon = card.icons;
 
@@ -26,12 +26,12 @@ const ServiceSection = ({ section }) => {
           return (
             <div
               key={index}
-              className="cart flex bg-[#b9ecff]  flex-col justify-center items-start gap-2 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
+              className="cart flex bg-[#b9ecff]  flex-col justify-center items-start gap-3 md:gap-4 2xl:gap-6  rounded-lg p-[10px] md:p-[20px] 2xl:p-[30px] "
             >
               <Icon className="icon" />
               <div className=" flex flex-col gap-2 justify-center items-start">
-                <h3 className="subHeading">{card.title}</h3>
-                <p className="mainParagraph ">{card.description}</p>
+                <h3 className="subHeading text-start">{card.title}</h3>
+                <p className="mainParagraph text-start ">{card.description}</p>
 
                 {ServiceDetails && <ServicePopup service={serviceDetail} />}
               </div>

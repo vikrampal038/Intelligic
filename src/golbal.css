@@ -39,7 +39,7 @@
   }
 
   .mainParagraph {
-    @apply text-[14px] sm:text-[16px]  font-medium capitalize  tracking-wide leading-6 text-justify  text-[#4b4b4b];
+    @apply text-[14px] sm:text-[16px] font-medium capitalize tracking-wide leading-6 text-center text-[#4b4b4b];
   }
   .iconHeading {
     @apply text-[20px] text-[#0B97B8] shrink-0 hover:text-[#e0f6ff] transition-all duration-1200  ease-in-out ;

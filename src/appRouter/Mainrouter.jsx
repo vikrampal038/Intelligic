@@ -7,12 +7,10 @@ import Blog from "@/Pages/Blog";
 import Contact from "@/Pages/Contact";
 import BlogDetail from "@/Pages/BlogDetail";
 import ServiceEnquiry from "@/Pages/ServiceEnquiry";
-import ScrollToTop from "@/common/ScrollToTop";
 
 const MainRouter = () => {
   return (
     <>
-      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

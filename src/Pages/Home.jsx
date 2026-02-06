@@ -10,7 +10,10 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <HomeHero />
+      <section id="hero">
+        <HomeHero />
+      </section>
+
       <div>
         <section className="bg-gradient-brand-50-100-200  py-10 md:py-14 2xl:py-10">
           <HomeAbout />

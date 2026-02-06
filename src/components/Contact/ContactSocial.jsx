@@ -16,10 +16,10 @@ const ContactSocial = () => {
                 Community Engagement
               </h1>
             </div>
-            <h2 className="mainHeading w-1/2 text-center">
+            <h2 className="mainHeading text-center">
               Join the Community
             </h2>
-            <p className="mainParagraph w-1/2 text-center">
+            <p className="mainParagraph text-center">
               Become a Part of our thriving community, where you can connect
               with like-minded Individuals, collaborate on projects, and grow
               together.
@@ -27,7 +27,7 @@ const ContactSocial = () => {
           </div>
 
           {/* for Social Account  details */}
-          <div className="grid grid-cols-1 lg:grid-cols-4 justify-center items-center gap-14  w-400">
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 justify-center items-center gap-10 xl:gap-14  3xl:w-400">
             {ContactSocialData.map((item, index) => {
               const Icon = item.icons;
               const Content = (

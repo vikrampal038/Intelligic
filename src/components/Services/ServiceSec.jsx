@@ -22,7 +22,7 @@ const ServiceSec = () => {
   return (
     <section className="topmain">
       <div className="main w-full">
-        <div className="  w-full flex flex-col justify-center items-center gap-14">
+        <div className="  w-full flex flex-col justify-center items-center gap-8">
           {/* SectionHeading Section */}
           <div className="w-full flex flex-col justify-center items-center gap-4">
             <div className="subheadingbg w-fit flex justify-center items-center gap-3">

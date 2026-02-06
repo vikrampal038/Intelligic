@@ -56,7 +56,7 @@ function Counter() {
       <div className="main  border-blue-900">
         <div
           ref={sectionRef}
-          className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 justify-center items-center"
+          className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-4 gap-10 justify-center items-center"
         >
           {countersData.map((item, index) => (
             <div
@@ -67,7 +67,7 @@ function Counter() {
                 <h2 className="mainHeading text-shadow-pro text-black">{counts[index]}</h2>
                 <TbPlus className="icon text-black text-[25px]" />
               </div>
-              <p className="mainParagraph">{item.label}</p>
+              <p className="mainParagraph text-center">{item.label}</p>
             </div>
           ))}
         </div>

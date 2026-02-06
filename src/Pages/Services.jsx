@@ -3,13 +3,13 @@ import ServiceSec from "../components/Services/ServiceSec";
 import ServicesAnalyzer from "../components/Services/ServicesAnalyzer";
 import ServicesConnect from "../components/Services/ServicesConnect";
 import ServiceValue from "../components/Services/ServicesValue";
-import DotGrid from "../components/ui/throttle";
+import DotGrid from "../common/Animations/throttle";
 // import DotGrid from './DotGrid';
 
 function Services() {
   return (
     <div className="relative overflow-hidden">
-      <section className="bg-gradient-brand-50-100-200 py-10 md:py-14 2xl:py-18">
+      <section id="hero" className="bg-gradient-brand-50-100-200 py-10 md:py-14 2xl:py-18">
         <ServiceSec />
       </section>
 

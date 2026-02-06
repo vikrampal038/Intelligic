@@ -1,13 +1,13 @@
 import React from "react";
 import { HiSparkles } from "react-icons/hi2";
 // import { HomeSocial } from "../../Data/HomeData";
-import HandleMouseLeave from "@/common/HandleMouseLeave";
+import HandleMouseLeave from "@/common/Animations/HandleMouseLeave";
 const HomeAbout = () => {
   return (
     <section className="topmain">
       <div className="main flex flex-col  lg:flex-row  lg:justify-between items-center w-full">
         {/* Left Side Sction */}
-        <div className="w-full lg:w-1/2 flex justify-center items-center">
+        <div className="w-full lg:w-1/2 flex justify-center items-center ">
           <HandleMouseLeave
             src="Assets/All Images/HomeAbout.webp"
             className="w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-2xl p-2 normal-shadow"
@@ -18,9 +18,9 @@ const HomeAbout = () => {
         {/* Right Side Bar */}
         <div className=" w-full lg:w-1/2 flex flex-col justify-start items-center lg:items-start gap-8 px-4 sm:px-6">
           {/* Heading */}
-          <div className="w-full flex flex-col justify-start items-center lg:items-start gap-8 ">
+          <div className="w-full flex flex-col justify-start items-center gap-8">
             {/* heading */}
-            <div className="subheadingbg w-fit flex justify-center items-center gap-3">
+            <div className="subheadingbg w-fit flex justify-center items-center  gap-3">
               <HiSparkles className="iconHeading" />
               <h1 className="subHeading text-black">About Us</h1>
             </div>
@@ -42,6 +42,18 @@ const HomeAbout = () => {
               </p>
             </div>
 
+
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HomeAbout;
+
+
+
             {/* social icons */}
             {/* <div className=" flex flex-col gap-6">
               <div className="flex justify-center items-center gap-4">
@@ -61,11 +73,3 @@ const HomeAbout = () => {
                 })}
               </div>
             </div> */}
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default HomeAbout;

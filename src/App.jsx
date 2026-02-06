@@ -3,11 +3,14 @@ import MainRouter from "./appRouter/MainRouter";
 import Navbar from "./common/Navbar";
 import Footer from "./common/Footer";
 import "react-phone-input-2/lib/style.css";
-import SocialIcons from "./common/SocialIcons";
+import SocialIcons from "./common/Animations/SocialIcons";
+import ScrollToTopButton from "./common/Animations/ScrollToTopButton";
 
 const App = () => {
   return (
     <div className="flex flex-col w-full items-center overflow-x-hidden">
+      <ScrollToTopButton />
+
       {/* Fixed Side Icons */}
       <SocialIcons />
 

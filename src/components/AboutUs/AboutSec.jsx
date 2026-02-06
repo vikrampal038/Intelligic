@@ -9,9 +9,9 @@ const AboutSec = () => {
   return (
     // bg-[#F6EEE3]
     <section className="topmain">
-      <div className="main flex flex-col lg:flex-row justify-between items-center  w-full">
+      <div className="main flex flex-col xl:flex-row justify-between items-center  w-full">
         {/* Left Side Sction */}
-        <div className=" w-full lg:w-1/2 flex justify-center items-center">
+        <div className=" w-full xl:w-1/2 flex justify-center items-center">
           <img
             className="cart w-140 h-auto rounded-2xl"
             src="Assets/All Images/AboutSec2.png"
@@ -20,25 +20,27 @@ const AboutSec = () => {
         </div>
 
         {/* Right Side Bar */}
-        <div className=" w-full lg:w-1/2 flex flex-col justify-center items-start gap-12">
+        <div className=" w-full xl:w-1/2 flex flex-col justify-center items-start gap-12">
           {/* Heading */}
-          <div className="w-full flex flex-col justify-center items-center gap-10 ">
-            <div className="w-full flex flex-col justify-center items-center gap-4">
+          <div className="w-full flex flex-col justify-center items-center gap-5 ">
+            {/* this Div is for heading  */}
+            <div className="w-full flex flex-col justify-center items-center gap-3">
               <div className="subheadingbg w-fit flex justify-center items-center gap-3">
                 <HiSparkles className="iconHeading" />
                 <h1 className="subHeading">About Us</h1>
               </div>
-              <h2 className="mainHeading text-[##505050 ">
+              <h2 className="mainHeading text-center">
                 Building Softwares, Building Trust
               </h2>
             </div>
+            {/* this is for paragraph */}
             <div className="flex flex-col gap-4">
-              <p className="mainParagraph">
+              <p className="mainParagraph text-center">
                 Our goal is not just to create cutting-edge software, but to
                 forge a relationship built on a foundation of trust and mutual
                 understanding. We view your goals as our own.
               </p>
-              <p className="mainParagraph">
+              <p className="mainParagraph text-center">
                 On the strength of technology and the foundation of trust, we
                 help take your business to new heights.
               </p>

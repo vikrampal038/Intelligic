@@ -25,7 +25,7 @@ const Blogsec = () => {
               <Link
                 key={blog.id}
                 to={`/blog/${blog.slug}`}
-                className="border border-slate-800 rounded-sm bg-gray-100 overflow-hidden hover:shadow-lg transition"
+                className="border border-slate-800 rounded-sm bg-[#e0f6ff] overflow-hidden hover:shadow-lg transition"
               >
                 {/* Featured Image */}
                 <div className="relative group overflow-hidden  ">

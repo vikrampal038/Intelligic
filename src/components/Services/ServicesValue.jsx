@@ -15,8 +15,8 @@ const ServicesValue = () => {
               <HiSparkles className="iconHeading" />
               <h1 className="subHeading">Our Value</h1>
             </div>
-            <h2 className="mainHeading text-black">Big Data Analyzer</h2>
-            <p className="mainParagraph text-black">
+            <h2 className="mainHeading text-black text-start ">Big Data Analyzer</h2>
+            <p className="mainParagraph text-black text-start ">
               We build custom digital solutions with unwavering integrity, while
               our innovative spirit drives us to exceed your expectations in
               every project.
@@ -37,8 +37,8 @@ const ServicesValue = () => {
 
                   <Icon className="icon text-[45px] z-10" />
                   <div className="flex flex-col gap-4 justify-center items-start relative z-10 w-full ">
-                    <h3 className="subHeading text-black">{item.title}</h3>
-                    <p className="mainParagraph text-[#252525]">
+                    <h3 className="subHeading text-start text-black">{item.title}</h3>
+                    <p className="mainParagraph text-start text-[#252525]">
                       {item.description}
                     </p>
                   </div>
@@ -49,7 +49,7 @@ const ServicesValue = () => {
         </div>
 
         {/* Right Side SECTION */}
-        <div className=" w-full cart-shadow xl:w-1/3 px-4 lg:px-15 py-4 lg:py-10 flex justify-center items-start rounded-xl bg-white">
+        <div className=" w-full cart-shadow xl:w-1/2 px-4 lg:px-15 py-4 lg:py-10 flex justify-center items-start rounded-xl bg-white">
           <Progress />
         </div>
       </div>

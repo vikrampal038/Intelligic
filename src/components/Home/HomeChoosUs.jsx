@@ -1,31 +1,6 @@
 import React from "react";
 import HomeHeading from "../../common/HomeHeading";
-import { motion } from "framer-motion";
-import { HomeChooseUs } from "../../Data/HomeData";
-
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.15,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 30,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
+  import { HomeChooseUs } from "../../Data/HomeData";
 
 const HomeChoosUs = () => {
   return (
@@ -39,29 +14,16 @@ const HomeChoosUs = () => {
           />
 
           {/* Maine Section */}
-          <motion.div
-            className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6"
-            variants={containerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
+          <div
+            className="w-full grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
             {HomeChooseUs.map((item, index) => (
-              <motion.div
+              <div
                 key={index}
-                variants={cardVariants}
-                whileHover={{
-                  y: -6,
-                  boxShadow: "0px 18px 40px rgba(0,0,0,0.12)",
-                }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6  rounded-lg border border-slate-500"
-              >
+                className=" flex bg-[#f7f7f7] flex-col justify-center items-center gap-6  rounded-lg border border-slate-500">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full sm:w-120 h-60 object-center rounded-xl rounded-b-none"
-                />
+                  className="w-full sm:w-120 h-60 object-center rounded-xl rounded-b-none"/>
 
                 <div className="flex flex-col gap-4 justify-center items-center py-2 px-3">
                   <h3 className="subHeading">{item.title}</h3>
@@ -69,9 +31,9 @@ const HomeChoosUs = () => {
                     {item.description}
                   </p>
                 </div>
-              </motion.div>
+              </div>
             ))}
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

@@ -37,7 +37,7 @@ const Testiminoal = () => {
 
   return (
     <section className="w-full">
-      <div className="md:w-4xl xl:w-6xl mx-auto px-4 relative">
+      <div className="md:w-2xl lg:w-4xl xl:w-6xl mx-auto px-4 relative">
         <Carousel
           setApi={setApi}
           opts={{ align: "center", loop: true }}
@@ -52,7 +52,7 @@ const Testiminoal = () => {
                   selectedIndex === index ? "is-selected" : ""
                 }`}
               >
-                <div className="cart-shadow  w-[330px] h-[280px] lg:h-[310px] bg-[#f7f7f7] text-center rounded-xl p-6 shadow-lg transition-all duration-500 flex flex-col gap-4">
+                <div className="cart-shadow  w-[330px] h-[280px] md:h-[320px]  lg:h-[310px] bg-[#f7f7f7] text-center rounded-xl p-6 shadow-lg transition-all duration-500 flex flex-col gap-4">
                   <div className="flex justify-center">
                     <FaUsers className="text-black text-6xl" />
                   </div>

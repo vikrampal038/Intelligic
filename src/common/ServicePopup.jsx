@@ -13,7 +13,7 @@ const ServicePopup = ({ service }) => {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <button className="group bg-transparent text-gray-800 text-2xl sm:text-3xl border rounded-md border-gray-600 px-2 py-1 font-bold flex items-center justify-center transition-transform duration-700 hover:scale-105">
+        <button className="group bg-transparent text-gray-800 text-2xl border rounded-md border-gray-600 px-2 py-1 font-bold flex items-center justify-center transition-transform duration-700 hover:scale-105">
           <PiArrowBendDoubleUpRightBold className="transition-transform duration-700 group-hover:rotate-45" />
         </button>
       </DialogTrigger>
