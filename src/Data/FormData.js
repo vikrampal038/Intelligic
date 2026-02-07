@@ -1,5 +1,5 @@
 export const serviceOptions = [
-  { label: "Web Developmen", value: "Website Development Services" },
+  { label: "Web Development", value: "Website Development Services" },
   { label: "Cross-Platform Development", value: "mobile app services" },
   { label: "Business Portfolion", value: "Website Development Services" },
   { label: "Native App Development", value: "mobile app services" },

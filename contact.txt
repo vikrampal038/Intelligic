@@ -1,85 +1,138 @@
 import React from "react";
-import { ContactPage } from "../../Data/FooterData";
-import { IoArrowRedoSharp } from "react-icons/io5";
+import { useState } from "react";
+import { validateForm } from "../../utils/formValidation";
+import { submitWithToast } from "../../hooks/useFormSubmit";
+import NameInputField from "../Form/NameinputField";
+import EmailInputField from "../Form/EmailInputField";
+import PhoneInputField from "../Form/PhoneInputField";
+import TextInputField from "../Form/TextInputField";
+import TextareaField from "../Form/TextareaField";
 
-const ContactSec = () => {
+const Contactform = () => {
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    subject: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const rules = {
+    name: "name",
+    email: "email",
+    subject: "subject",
+    message: true,
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validationErrors = validateForm(data, rules);
+
+    if (!data.phone || data.phone.length < 10) {
+      validationErrors.phone = "Enter valid phone number";
+    }
+
+    if (Object.keys(validationErrors).length) {
+      setErrors(validationErrors);
+      return;
+    }
+
+    await submitWithToast({
+      data,
+      pageKey: "contact-info",
+      successMsg: "Thanks! We will contact you soon.",
+      failMsg: "Submission failed. Try again.",
+      resetForm: () =>
+        setData({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        }),
+      setLoading,
+    });
+  };
   return (
-    <section className="w-full flex flex-col justify-center items-center bg-[#F6EEE3] pt-15 ">
-      <div className="main w-full border mx-[215px]">
-        <div className="w-full flex justify-center items-center gap-25 border">
-          {/* for Details*/}
-          <div className="w-[720px] flex flex-col justify-center items-center gap-14 border">
-            <div className=" w-full flex flex-col justify-center items-start gap-10">
-              {/* for Heading */}
-              <div className="w-full flex flex-col justify-center items-start gap-6">
-                <h1 className="mainHeading text-shadow-pro text-[50px]  font-extrabold text-[#1E3A8A]">
-                  Let’s Start a{" "}
-                  <span
-                    className="bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#38BDF8] bg-clip-text font-extrabold text-transparent">
-                    Conversation
-                  </span>{" "}
-                  That Matters
-                </h1>
-                <p className="mainParagraph font-bold">
-                  Have a project idea or business requirement? Tell us about
-                  your needs and our team will reach out to discuss how we can
-                  deliver the right technology solutions for you.
-                </p>
-              </div>
-              {/* for contact details */}
-              <div className="flex  w-full">
-                {ContactPage.map((item, index) => {
-                  const Icon = item.icons;
-
-                  const Content = (
-                    <div className="flex justify-center items-start ">
-                      <Icon className="footerIcon transition-all duration-700 hover:scale-110 hover:text-blue-500" />
-                      <div className="flex flex-col group relative h-[22px] w-[265px] overflow-hidden">
-                        <span className="text animationtext">{item.label}</span>
-                        <span className="text animationtexthover">
-                          {item.label}
-                        </span>
-                      </div>
-                    </div>
-                  );
-                  return item.to ? (
-                    <a
-                      key={index}
-                      href={item.to}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition hover:opacity-80"
-                    >
-                      {Content}
-                    </a>
-                  ) : (
-                    <div key={index}>{Content}</div>
-                  );
-                })}
-              </div>
-            </div>
-
-            {/* for ads */}
-            <div className=" bg-[#ffffff7c] w-full cart flex justify-center items-center gap-2 pr-2 ">
-              {/* title Section */}
-              <div className="flex p-[30px]  flex-col justify-center items-start gap-6">
-                <h2 className="subHeading w-50 text-shadow-pro">Want to Work or Join Us?</h2>
-                <div className="flex justify-center items-start gap-2">
-                  <span className="text text-[14px]">Fill the form below</span>
-                  <IoArrowRedoSharp className="icon text-[16px]" />
-                </div>
-              </div>
-              {/* image section */}
-              <img className=" w-80 h-80" 
-              src="Assets/All Images/ContactAdsimg.png"
-              alt="contact ads img"/>
-            </div>
+    // bg-[#B6B4B6]
+    <section className="topmain">
+      <div className="main w-full">
+        <div className="w-full flex flex-col justify-center items-center gap-5 xl:gap-10 pb-10">
+          {/* for Heading */}
+          <div className="w-full flex flex-col justify-center items-center gap-3">
+            <h1 className="subHeading text-[20px] xl:text-[25px] text-center text-shadow-pro font-extrabold tracking-widest">
+              Just Fill out the form and hit submit
+            </h1>
+            <h2 className="text text-[16px] text-center w-full">
+              We're here to assist
+            </h2>
           </div>
 
-          {/* For Form */}
-          <div className="w-[625px] flex justify-center items-center cart-shadow  bg-white rounded-lg h-158 px-[30px] py-[50px]">
-            <div className="border border-black w-full h-full">
-              <h1>contact form</h1>
+          <div className="flex  justify-center flex-col lg:flex-row gap-15 items-center w-full">
+            {/* for contact details */}
+            <div className="flex cart-shadow justify-center w-full xl:w-150 items-center gap-14 rounded-lg p-5">
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col justify-center items-center gap-4 w-full"
+              >
+                <NameInputField
+                  label="Name"
+                  value={data.name}
+                  onChange={(value) => setData({ ...data, name: value })}
+                  error={errors?.name}
+                />
+
+                <EmailInputField
+                  label="Email"
+                  value={data.email}
+                  onChange={(value) => setData({ ...data, email: value })}
+                  error={errors?.email}
+                />
+
+                <PhoneInputField
+                  value={data.phone}
+                  onChange={(phone) => setData({ ...data, phone })}
+                  error={errors?.phone}
+                />
+
+                <TextInputField
+                  label="Subject"
+                  value={data.subject}
+                  onChange={(value) => setData({ ...data, subject: value })}
+                  error={errors?.subject}
+                />
+
+                <TextareaField
+                  label="Your Message"
+                  value={data.message}
+                  onChange={(value) => setData({ ...data, message: value })}
+                  error={errors?.message}
+                />
+
+                <button
+                  disabled={loading}
+                  // className="w-full cart2 bg-[#F7F6F5] text-black font-bold px-6 py-2.5 tracking-widest whitespace-nowrap rounded-md hover:bg-[#00AEEF] transition-all duration-1500 ease-in-out"
+                  className="button w-full cart2"
+                >
+                  {loading ? "Submitting..." : "Submit"}
+                </button>
+              </form>
+            </div>
+
+            {/* For Map section */}
+            <div
+              className="flex cart-shadow justify-center w-full xl:w-150 items-center gap-14 rounded-lg overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.430112824212!2d72.85828459999999!3d19.176407399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7a9de6ef235%3A0x93d78ac4732e58c1!2sIntelligic%20Solutions%20%7C%20Best%20Web%20Designer%20in%20Mumbai!5e0!3m2!1sen!2sin!4v1770448527059!5m2!1sen!2sin"
+                className="w-full h-[350px] sm:h-[400px] lg:h-[580px] border-0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>
@@ -88,4 +141,4 @@ const ContactSec = () => {
   );
 };
 
-export default ContactSec;
+export default Contactform;

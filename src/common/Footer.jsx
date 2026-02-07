@@ -1,23 +1,14 @@
-import React from "react";
 import { useState } from "react";
 import { validateForm } from "../utils/formValidation";
 import { submitWithToast } from "../hooks/useFormSubmit";
 import EmailInputField from "../components/Form/EmailInputField";
 
 import { NavLink } from "react-router-dom";
-import { SeoData } from "../Data/FooterData";
-import { Service } from "../Data/FooterData";
-import { Social } from "../Data/FooterData";
-import { Contact } from "../Data/FooterData";
-import { Legal } from "../Data/FooterData";
-// import { HiOutlineArrowCircleRight } from "react-icons/hi";
+import { SeoData, Service, Social, Contact, Legal } from "../Data/FooterData";
 import { FaAngleDoubleRight } from "react-icons/fa";
 
 const Footer = () => {
-  const [data, setData] = useState({
-    email: "",
-  });
-
+  const [data, setData] = useState({ email: "" });
   const [errors, setErrors] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -27,83 +18,82 @@ const Footer = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
-    const validationErrors = validateForm(data, rules);
+    try {
+      const formData = new FormData();
+      formData.append("email", data.email);
+      formData.append("_subject", "Newsletter Subscription");
 
-    if (!data.phone || data.phone.length < 10) {
-      validationErrors.phone = "Enter valid phone number";
+      const res = await fetch("https://formspree.io/f/mkovnrvw", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await res.json();
+      console.log("Formspree response:", result);
+
+      if (result.ok) {
+        setData({ email: "" });
+      }
+    } catch (err) {
+      console.error("Form error", err);
+    } finally {
+      setLoading(false);
     }
-
-    if (Object.keys(validationErrors).length) {
-      setErrors(validationErrors);
-      return;
-    }
-
-    await submitWithToast({
-      data,
-      pageKey: "contact-info",
-      successMsg: "Thanks! We will contact you soon.",
-      failMsg: "Submission failed. Try again.",
-      resetForm: () =>
-        setData({
-          email: "",
-        }),
-      setLoading,
-    });
   };
+
   const columns = 4;
   const itemsPerColumn = Math.ceil(SeoData.length / columns);
-
   const seoColumns = Array.from({ length: columns }, (_, i) =>
     SeoData.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn),
   );
 
   return (
-    <div className="w-full ">
+    <div className="w-full">
       <div className="flex flex-col justify-center items-center w-full bg-gradient-brand-400-300-400">
-        {/* For First Section */}
-        <div className=" px-5 sm:px-10 md:px-25 lg:px-30 w-full py-16 flex justify-center flex-col items-center gap-10 bg-gradient-brand-400-300-400">
-          {/* For Logo And Email Section */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 justify-between items-start gap-6 ">
-            <div className="flex justify-start items-start">
-              <img
-                src="./Assets/Logo/intelligic.png"
-                alt="Footer logo"
-                className="w-32 sm:w-40 md:w-48 h-auto object-contain"
-              />
-            </div>
+        <div className="px-5 sm:px-10 md:px-25 lg:px-30 w-full py-16 flex flex-col items-center gap-10">
+          {/* Logo */}
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <img
+              src="./Assets/Logo/intelligic.png"
+              alt="Footer logo"
+              className="w-32 sm:w-40 md:w-48 h-auto object-contain"
+            />
 
-            {/* Email Subscription */}
-            <div className="flex flex-col  gap-3 w-full">
+            {/* Newsletter */}
+            <div className="flex flex-col gap-3 w-full md:w-90 lg:w-120 xl:w-150">
               <span className="footertext font-semibold">
                 Subscribe to our newsletter for latest updates
               </span>
 
-              <div className="flex md:w-90 lg:w-120 xl:w-150 items-stretch gap-2 sm:gap-3 border  border-slate-500 rounded-lg p-2">
-                <form
-                  onSubmit={handleSubmit}
-                  className="flex flex-col lg:flex-row  justify-center items-start gap-4 w-full"
+              <form
+                onSubmit={handleSubmit}
+                className="flex flex-col lg:flex-row gap-4 border border-slate-500 rounded-lg p-2"
+              >
+                <EmailInputField
+                  label={false}
+                  name="email"
+                  value={data.email}
+                  onChange={(value) =>
+                    setData((prev) => ({ ...prev, email: value }))
+                  }
+                  error={errors?.email}
+                />
+
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="relative group overflow-hidden button w-full md:w-auto inline-flex items-center justify-center disabled:opacity-60"
                 >
-                  <EmailInputField
-                    label={false}
-                    value={data.email}
-                    onChange={(value) => setData({ ...data, email: value })}
-                    error={errors?.email}
-                    className="borer-none"
-                  />
-
-                  <button className="relative group overflow-hidden button w-full md:w-auto inline-flex items-center justify-center">
-                    {/* Hover background */}
-                    <span className="absolute inset-0 bg-[#8be0ff5b] border rounded-lg -translate-x-full group-hover:translate-x-0 transition-transform duration-700 ease-in-out z-0"></span>
-
-                    {/* Button text */}
-                    <span className="relative z-10">Subscribe</span>
-                  </button>
-                </form>
-              </div>
+                  <span className="absolute inset-0 bg-[#8be0ff5b] border rounded-lg -translate-x-full group-hover:translate-x-0 transition-transform duration-700 z-0"></span>
+                  <span className="relative z-10">
+                    {loading ? "Subscribing..." : "Subscribe"}
+                  </span>
+                </button>
+              </form>
             </div>
           </div>
-
           {/* For Links And Contacts */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* For Services Link */}
@@ -219,7 +209,6 @@ const Footer = () => {
                 })}
               </div>
             </div>
-
           </div>
         </div>
 
@@ -243,7 +232,7 @@ const Footer = () => {
         </div>
 
         {/* For Third Section */}
-        <div className=" px-5 sm:px-15 md:px-25 lg:px-30 w-full py-4   grid grid-cols-1 xl:grid-cols-2 border justify-between items-center gap-6 bg-gradient-brand-400-300-400">
+        <div className=" px-5 sm:px-15 md:px-25 lg:px-30 w-full py-4 grid grid-cols-1 xl:grid-cols-2 justify-between items-center gap-6 bg-gradient-brand-400-300-400">
           {/* for copy write */}
           <div className="footertext tracking-wider text-center xl:text-start  transition-all duration-1200  hover:text-gray-600">
             <span className="text-center lg:text-start">
@@ -253,24 +242,24 @@ const Footer = () => {
 
           {/* for legals Links */}
           <div className="flex flex-wrap sm:flex-nowrap  justify-center xl:justify-end items-center gap-6">
-              {Legal.map((item, index) => (
-                <NavLink
-                  key={index}
-                  to={item.path}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-baseline justify-center xl:justify-end transition text-center"
-                >
-                  <div className="flex flex-col justify-center items-center group relative h-[22px] w-[180px] overflow-hidden">
-                    <span className="footertext animationtext text-center">
-                      {item.label}
-                    </span>
-                    <span className="footertext animationtexthover text-center">
-                      {item.label}
-                    </span>
-                  </div>
-                </NavLink>
-              ))}
+            {Legal.map((item, index) => (
+              <NavLink
+                key={index}
+                to={item.path}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-baseline justify-center xl:justify-end transition text-center"
+              >
+                <div className="flex flex-col justify-center items-center group relative h-[22px] w-[180px] overflow-hidden">
+                  <span className="footertext animationtext text-center">
+                    {item.label}
+                  </span>
+                  <span className="footertext animationtexthover text-center">
+                    {item.label}
+                  </span>
+                </div>
+              </NavLink>
+            ))}
           </div>
         </div>
       </div>
