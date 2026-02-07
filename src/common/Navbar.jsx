@@ -20,7 +20,7 @@ const Navbar = () => {
         {/* Logo */}
         <NavLink to="/" className="inline-flex items-center">
           <img
-            src="/Assets/Logo/intelligic.png"
+            src="https://raw.githubusercontent.com/vikrampal038/Project-Assets/main/Intelligic/Images/intelligic.png"
             alt="Intelligic – Technology & Digital Solutions"
             className="w-28 sm:w-30 md:w-35 lg:w-42 xl:w-48 h-auto object-contain"
           />

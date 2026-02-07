@@ -56,7 +56,7 @@ const Footer = () => {
           {/* Logo */}
           <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-6">
             <img
-              src="./Assets/Logo/intelligic.png"
+              src="https://raw.githubusercontent.com/vikrampal038/Project-Assets/main/Intelligic/Images/intelligic.png"
               alt="Footer logo"
               className="w-32 sm:w-40 md:w-48 h-auto object-contain"
             />

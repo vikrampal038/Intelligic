@@ -9,7 +9,7 @@ const HomeAbout = () => {
         {/* Left Side Sction */}
         <div className="w-full lg:w-1/2 flex justify-center items-center ">
           <HandleMouseLeave
-            src="Assets/All Images/HomeAbout.webp"
+            src="https://raw.githubusercontent.com/vikrampal038/Project-Assets/main/Intelligic/Images/HomeAbout.webp"
             className="w-full max-w-sm sm:max-w-md lg:max-w-lg rounded-2xl p-2 normal-shadow"
             alt="OurSkill Section Image"
           />

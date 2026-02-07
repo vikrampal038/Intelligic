@@ -14,7 +14,7 @@ const AboutSec = () => {
         <div className=" w-full xl:w-1/2 flex justify-center items-center">
           <img
             className="cart w-140 h-auto rounded-2xl"
-            src="Assets/All Images/AboutSec2.png"
+            src="https://raw.githubusercontent.com/vikrampal038/Project-Assets/main/Intelligic/Images/AboutSec2.png"
             alt="OurSkill Section Image"
           />
         </div>
